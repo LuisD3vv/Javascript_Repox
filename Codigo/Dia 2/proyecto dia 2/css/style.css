@@ -12,5 +12,122 @@
 -mediaqueries /responsivo
 -comentar codigo
 */
+
+/*estilos generales*/
 :root {
+}
+body {
+  font-family: monospace;
+  font-weight: 700;
+  background: linear-gradient(rgb(229, 142, 142), rgb(102, 202, 202));
+}
+h1 {
+  margin: 0 auto;
+}
+#titulo {
+  text-align: center;
+  text-transform: uppercase;
+  width: 70%;
+}
+.title-bg {
+  background-color: rgb(177, 225, 225);
+  width: 25%;
+  margin: 1rem auto;
+  border: solid 3px black;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+@media (360px <= width <= 700px) {
+  .title-bg {
+    width: 60%;
+  }
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 70rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: solid 3px black;
+  gap: 1rem;
+}
+.nav-bg {
+  background-color: rgb(182, 253, 250);
+}
+a {
+  /* text-decoration: none; */
+  color: black;
+  text-shadow: none;
+  list-style: none;
+  border: solid 3px rgb(97, 151, 187);
+  width: 30rem;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 16px;
+}
+a:hover {
+  color: blue;
+  font-size: 14px;
+}
+.contenedor {
+  border: solid 3px rgb(0, 0, 0);
+  margin: 1rem auto;
+  max-width: 120rem;
+  width: 95%;
+  height: 100rem;
+  border-radius: 1rem;
+  background: linear-gradient(rgb(45, 219, 219), rgb(226, 121, 121));
+}
+
+/*Estilos biografia*/
+.contenido_principal {
+  padding: 1rem;
+  display: grid;
+}
+.contenido_principal h2 {
+  border: solid 3px rgb(0, 0, 0);
+  width: 30%;
+  margin: auto;
+  padding: 1rem;
+  text-transform: uppercase;
+  background-color: blanchedalmond;
+}
+section {
+  text-align: center;
+  width: 95%;
+  height: 27rem;
+  border: solid 3px black;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(246, 182, 182);
+}
+.imagenes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 1rem auto;
+  gap: 1rem;
+  object-position: center;
+}
+img {
+  object-fit: cover;
+  border: 3px solid black;
+
+  width: 20rem;
+  height: 20rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 50rem;
+  margin: 0 auto;
+}
+footer a {
+  border: unset;
 }

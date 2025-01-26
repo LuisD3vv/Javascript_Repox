@@ -1,3 +1,13 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  width: 90%;
+  margin: auto;
+}
+body {
+  font-family: monospace;
+  font-size: 1rem;
+}
 div p {
   color: green;
 }
@@ -9,6 +19,66 @@ ol > li {
 h2 + h3 {
   background-color: lightskyblue;
 }
+/*Con estos selectores podemos ser muy especificos
+podemos seleccionar un elemento que empieza, tanto si termina con un patron
+o es un elemento especifico
+
+
+a[href^="https"] {
+color: blue;
+}
+
+img[src$=".jpg"] {
+border-radius: 5px;
+}
+*/
+
 div p[align="left"]:hover {
   background-color: gold;
+}
+.contenedor-imagenes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: red;
+  padding: 1rem;
+  width: 70%;
+  margin: auto;
+  border-radius: 10px;
+  gap: 0.5rem;
+}
+img {
+  border-radius: 1px;
+  object-fit: cover;
+  max-width: 400px;
+  width: 100%;
+  height: 300px;
+  max-height: auto;
+}
+.contenedor-imagenes p {
+  color: black;
+  font-weight: 700;
+  background-color: yellow;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.image1,
+.image2 {
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+.contenedor-imagenes:hover .image1,
+.contenedor-imagenes:hover .image2 {
+  border: solid 2px black;
+  background-color: blue;
+  padding: 1rem;
+}
+section {
+  padding: 1rem;
+  width: 70%;
+  margin: 1rem auto auto;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
 }
