@@ -17,25 +17,34 @@
 :root {
 }
 body {
+  font-size: 17px;
   font-family: monospace;
   font-weight: 700;
-  background: linear-gradient(rgb(229, 142, 142), rgb(102, 202, 202));
 }
 h1 {
+  margin: 1px auto;
+  border-left: solid 4px black;
+  border-top: solid 4px black;
+  border-right: solid 4px black;
+}
+.nav__principal {
+  display: flex;
   margin: 0 auto;
+  padding: 0.5rem;
+  border: solid 5px black;
+  gap: 1rem;
 }
 #titulo {
   text-align: center;
   text-transform: uppercase;
-  width: 70%;
+  width: 20%;
 }
 .title-bg {
-  background-color: rgb(177, 225, 225);
-  width: 25%;
-  margin: 1rem auto;
-  border: solid 3px black;
+  background-color: rgb(95, 227, 227);
+  width: 60%;
+  margin: 2rem auto;
   padding: 0.5rem;
-  border-radius: 1rem;
+  padding: 1rem;
 }
 @media (360px <= width <= 700px) {
   .title-bg {
@@ -46,88 +55,115 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  max-width: 70rem;
-  width: 80%;
+  width: 55%;
   margin: 0 auto;
   padding: 0.5rem;
-  border-radius: 1rem;
-  border: solid 3px black;
   gap: 1rem;
+  background-color: rgb(255, 255, 255, 50%);
 }
-.nav-bg {
-  background-color: rgb(182, 253, 250);
-}
-a {
+.nav a {
   /* text-decoration: none; */
   color: black;
   text-shadow: none;
   list-style: none;
-  border: solid 3px rgb(97, 151, 187);
-  width: 30rem;
+  width: 35%;
   text-align: center;
   padding: 0.5rem;
-  border-radius: 0.5rem;
   text-decoration: none;
   font-size: 16px;
+  text-transform: uppercase;
 }
-a:hover {
-  color: blue;
-  font-size: 14px;
+.nav a:nth-child(1) {
+  border-right: solid 4px black;
 }
-.contenedor {
-  border: solid 3px rgb(0, 0, 0);
+
+.nav a:nth-child(3) {
+  border-left: solid 4px black;
+}
+.nav a:hover {
+  color: #8c00ff;
+  font-size: 15px;
+}
+.contenedor__principal {
   margin: 1rem auto;
   max-width: 120rem;
-  width: 95%;
-  height: 100rem;
-  border-radius: 1rem;
-  background: linear-gradient(rgb(45, 219, 219), rgb(226, 121, 121));
+  height: auto;
+  background: linear-gradient(rgb(199, 224, 224), rgb(232, 191, 191));
+  overflow: hidden;
+  border: solid 5px rgb(0, 0, 1);
 }
 
 /*Estilos biografia*/
-.contenido_principal {
-  padding: 1rem;
-  display: grid;
-}
+
 .contenido_principal h2 {
-  border: solid 3px rgb(0, 0, 0);
-  width: 30%;
-  margin: auto;
+  border-left: solid 5px black;
+  border-right: solid 5px black;
+  width: 50%;
+  margin: 1rem auto;
   padding: 1rem;
   text-transform: uppercase;
-  background-color: blanchedalmond;
+  background-color: rgba(251, 251, 251, 0.7);
 }
-section {
+.contenido {
   text-align: center;
   width: 95%;
-  height: 27rem;
-  border: solid 3px black;
-  margin: 1rem auto;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: rgb(246, 182, 182);
+  height: 30rem;
+  border: solid 5px black;
+  margin: 3rem auto;
+  background-color: rgb(242, 172, 172);
 }
-.imagenes {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: 1rem auto;
-  gap: 1rem;
-  object-position: center;
-}
-img {
-  object-fit: cover;
-  border: 3px solid black;
-
-  width: 20rem;
-  height: 20rem;
-}
-
+/*Estilos footer*/
 footer {
   display: flex;
-  justify-content: center;
-  width: 50rem;
   margin: 0 auto;
+  padding: 0.5rem;
+  gap: 1rem;
 }
-footer a {
-  border: unset;
+
+.footer-bg {
+  width: 095%;
+}
+.nav__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 1rem;
+  background: linear-gradient(
+    hsl(186, 88%, 46%),
+    hsl(223, 90%, 60%),
+    hsl(240, 49%, 42%)
+  );
+  padding: 1rem;
+}
+.nav__footer a {
+  color: black;
+  text-shadow: none;
+  list-style: none;
+  width: 70%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.nav__footer a:hover {
+  color: #8c00ff;
+  font-size: 15px;
+}
+footer a:nth-child(1) {
+  border-right: solid 4px black;
+}
+footer a:nth-child(2) {
+  border-right: solid 4px black;
+}
+footer a:nth-child(3) {
+  border-right: solid 4px black;
+}
+footer a:nth-child(4) {
+  border-right: solid 4px black;
+}
+footer a:nth-child(6) {
+  border-left: solid 4px black;
 }

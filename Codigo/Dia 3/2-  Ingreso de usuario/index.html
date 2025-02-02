@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Usuario</title>
+    <link rel="stylesheet" href="">
+</head>
+<!--obtenemos el valor de el id mediante el .getElementById("nombre de la funcion").value("valor que almacena el id de la etiqueta")-->
+
+<body>
+    <p>Ingresa tu nombre</p>
+    <input type="text" id="entradaUsuario">
+    <button onclick="saludarUsuario()">saludar</button>
+    <script>
+        function saludarUsuario() {
+            let miNombre = document.getElementById("entradaUsuario");
+            alert("Hola " + miNombre.value);
+        }                                                                    
+    </script>
+</body>
+
+</html>
