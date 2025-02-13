@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ingresos de usuario 1</title>
+</head>
+
+<body>
+    <input type="text" id="inputTexto" value="Este es un mensaje">
+    <button onclick="mostrarTexto()">Click aqui</button>
+    <!--creamos un boton que al hacer click ejecuta la funcion mostrarTexto, exiten varias pero hasta ahorita vamos es esta.-->
+    <h1 id="titulo">Luisito</h1>
+    <script>
+        function mostrarTexto() { // llamamos a la funcion que se ejecutara al presionar sobre el
+            let elementoinput = document.getElementById("inputTexto"); // creamos una variable que se llama elemento input y le asignamos el valor del input con la funcion document.obtenerlementoporid(id del elemento)
+            let texto = document.getElementById("titulo"); // creamos una variable que se llama texto y le asignamos el valor del h1
+            let mensaje = elementoinput.value; // creamos una variable que se llama mensaje y le asignamos el valor del input
+            // document.getElementById('titulo').textContent = mensaje;
+
+            // la funcion nueva vista en el video es textContent
+            texto.textContent = mensaje;
+
+        }
+    </script>
+</body>
+
+</html>
