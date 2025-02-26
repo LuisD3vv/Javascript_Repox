@@ -1,0 +1,32 @@
+<!--codigo que dado un numero ingresas por el usuario comenzara una cuenta regresiva con la funcion
+setTimeput, el cual dada una funcion y un tiempo, acabado tal timepo ejecutara la funcion correspondiente.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+</head>
+
+<body>
+    <input type="number" id="tiempoElegido">
+    <button onclick="comenzarTiempo()">Alarma</button>
+    <h1 id="textoAlarma" style="color: red;">APAGADO</h1>
+
+
+    <script>
+        let elementoSegundos = document.getElementById("tiempoElegido");
+        let elementoTextoAlarma = document.getElementById("textoAlarma");
+
+        function comenzarTiempo() {
+            setTimeout(tiempoCumplido, 1000 * elementoSegundos.value); // segundos = 1000 milisegundos
+        }//El método global setTimeout() establece un temporizador que ejecuta una función o una pieza de código específica una vez que expira el temporizador.
+        function tiempoCumplido() {
+            elementoTextoAlarma.textContent = "ENCENDIDO";
+            elementoTextoAlarma.style.color = "green";
+        }
+    </script>
+</body>
+
+</html>
