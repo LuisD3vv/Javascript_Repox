@@ -52,7 +52,7 @@ h1 {
 }
 .title-bg {
   background-color: rgb(95, 227, 227);
-  width: 50%;
+  width: 70%;
   margin: 2rem auto;
   padding: 1rem;
 }
@@ -122,9 +122,6 @@ h1 {
   .title-bg {
     width: 90%;
   }
-  input {
-    background-color: red;
-  }
 }
 @media (700px <= width <= 880px) {
   #titulo,
@@ -136,9 +133,11 @@ h1 {
 .contenedor__principal {
   margin: 1rem auto;
   max-width: 200rem;
-  height: 280rem;
-  background: linear-gradient(rgb(199, 224, 224), rgb(232, 191, 191));
-  border: solid 5px rgb(0, 0, 1);
+  width: 90%;
+  height: auto;
+  background: linear-gradient(rgb(229, 245, 131), rgb(185, 173, 255));
+  border: double 15px rgb(0, 0, 1);
+  padding: 0.5rem;
 }
 
 /*Estilos biografia*/
@@ -155,10 +154,64 @@ h1 {
 .contenido {
   text-align: center;
   width: 95%;
-  height: 45rem;
+  height: 50rem;
   border: solid 5px black;
   margin: 3rem auto;
   background-color: rgb(242, 172, 172);
+}
+.datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+.datos article {
+  padding: 1rem;
+  width: 50rem;
+  height: 40rem;
+  background-color: #9b5acf;
+  margin: 0 auto;
+  border: solid 4px black;
+  align-content: center;
+  text-transform: uppercase;
+}
+.fthing {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+}
+.fthing article {
+  padding: 1rem;
+  width: 50rem;
+  height: 40rem;
+  margin: 0 auto;
+  border: solid 4px black;
+  align-content: center;
+  text-transform: uppercase;
+  background-color: #4de783;
+}
+
+.desc_im {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+  object-fit: cover;
+}
+.desc_im img {
+  width: 100%;
+  height: 100%;
+}
+.desc_im section {
+  padding: 1rem;
+  width: 50rem;
+  height: 40rem;
+  margin: 0 auto;
+  border: solid 4px black;
+  align-content: center;
+  text-transform: uppercase;
+  background-color: #dbb407;
 }
 /*Estilos footer*/
 footer {
@@ -207,71 +260,38 @@ footer a:nth-child(2) {
 
 /*ESTILOS CONTACTO*/
 
-.contenedor__form {
-  padding: 2rem;
-  box-shadow: 0px 0px 6px 3px rgb(0, 0, 0);
+.contenedor__principal-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: rgb(160, 155, 155);
+  width: 50%;
+  height: 50rem;
+  padding: 3rem;
   margin: 1rem auto;
-  height: 80rem;
   border-radius: 5px;
-  width: 60%;
 }
-
-.contenedor__form h1 {
-  margin-bottom: 2rem 1rem;
-}
-fieldset {
-  margin-top: 2rem;
-  border-top: none;
-  border-left: solid 4px black;
-  border-right: solid 4px black;
-  border-bottom: none;
-}
-.input-container {
-  position: relative;
-  display: inline-block;
-  margin: 1rem;
-}
-
 input {
-  position: relative;
-  margin-left: 1rem;
-  padding: 0.5rem;
-  width: 18rem;
+  padding: 1rem;
+  border: solid 4px green;
   border-radius: 5px;
 }
-
-label {
-  top: 4px;
-  position: absolute;
-  margin-left: 1.3rem;
-  position: absolute;
-  transition: transform 0.3s ease, color 0.3s ease;
-  color: blue;
+.contenedor__principal h1 {
+  border: 0;
 }
-
-input:focus + label,
-input:not(:placeholder-shown) + label {
-  transform: translateY(-25px);
-  background: transparent;
-}
-
 /**Estilos secciones**/
 
 .contenido_principal__secciones {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-  gap: 1.5rem;
+  gap: 1rem;
+  padding: 1rem;
 }
-
 .contenido_secciones {
   background-color: rgb(179, 215, 215);
   width: 90%;
-  height: 60rem;
+  height: auto;
+  max-height: 100rem;
   text-align: center;
   border: solid 5px black;
   flex: 1;
@@ -280,7 +300,7 @@ input:not(:placeholder-shown) + label {
 .contenido_secciones h2 {
   border-left: solid 5px black;
   border-right: solid 5px black;
-  width: 50%;
+  width: 90%;
   margin: 2rem auto;
   padding: 1rem;
   text-transform: uppercase;
@@ -288,27 +308,25 @@ input:not(:placeholder-shown) + label {
 }
 .contenedor_img {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  box-shadow: 0px 0px 6px 3px rgb(0, 0, 0);
-  margin: 3rem auto;
-  width: 95%;
+  margin: auto;
   gap: 5px;
+  width: 95%;
+  padding: 1rem;
+  object-fit: contain;
 }
 .contenido_principal__secciones img {
-  border: dotted 4px black;
-  margin: 0 auto;
-  width: 13rem;
+  border: 4px black;
+  width: 25rem;
   border-radius: 5px;
+  padding: 1rem;
+  height: 25rem;
+  margin: auto;
+  border: dotted black 4px;
 }
 /*estilos temporales*/
-.info {
-  box-shadow: 0px 0px 6px 3px rgb(0, 0, 0);
-  margin: 0 auto;
-  max-height: 20rem;
-  width: 95%;
-}
 
 .footer_seccion {
-  background-color: #dac9e8;
-  width: 84%;
+  background-color: #d1f0e4fc;
+  width: 100%;
+  padding: 1rem;
 }

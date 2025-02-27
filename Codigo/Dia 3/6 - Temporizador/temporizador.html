@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esperando</title>
+    <style>
+        P {
+            border: solid 1px green;
+            width: 200px;
+            margin: 1rem auto;
+            padding: 1rem;
+        }
+
+        body {
+            text-align: center;
+            width: 80%;
+            margin: 1rem auto;
+            border: 5px dotted green;
+            padding: 1rem;
+        }
+
+        button {
+            text-transform: uppercase;
+            width: 120px;
+            padding: 10px;
+            border-radius: 0;
+            border-color: green;
+        }
+
+        button:hover {
+            box-shadow: rgb(0 0 0);
+        }
+
+        h1 {
+            filter: drop-shadow(5px 5px 5px rgba(181, 236, 0, 0.5));
+            width: 50%;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body></body>
+<h1>Practica de setTimeout</h1>
+<p id="cambiar">Mensaje</p>
+<button id="boton" onclick="cambiarTexto()">enviar</button>
+<script>
+    const elementop = document.getElementById("cambiar");
+
+    function cambiarTexto() {
+        elementop.textContent = "Esperando...";
+        setTimeout(esperar, 5000);
+
+    }
+    function esperar() {
+        elementop.textContent = "¡Listo! Mensaje enviado.";
+        elementop.style.color = "green";
+
+    }
+
+</script>
+</body>
+
+</html>
+<!--
+    Crea una página web con un botón y un <p>.
+        Cuando el usuario haga clic en el botón, el texto del
+    <p> debe cambiar a "Esperando...".
+        Después de 5 segundos, el texto debe cambiar a "¡Listo! Mensaje actualizado.".
+        Usa textContent para cambiar el texto y setTimeout para hacer el retraso.
+    -->
