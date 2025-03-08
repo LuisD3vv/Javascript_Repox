@@ -1,38 +1,85 @@
 <!DOCTYPE html>
 <html lang="es-mx">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi biografía</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="nav__principal title-bg">
-            <h1 id="titulo">Lissandro AG</h1>
-            <nav class="nav">
-                <a href="secciones.html">Secciones</a>
-                <a href="biografia.html">Inicio</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
-        </div>
-
+      <div class="nav__principal title-bg">
+        <h1 id="titulo"><a href="biografia.html">Lissandro AG</a></h1>
+        <nav class="nav">
+          <a href="secciones.html">Secciones</a>
+          <a href="biografia.html">Inicio</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
     </header>
 
     <div class="contenedor__principal">
+      <form method="post" action="https://register-demo.freecodecamp.org">
+        <fieldset>
+          <legend>Ingresa tus datos</legend>
+          <label for="first-name"
+            >Ingresa tu primer Nombre:
+            <input id="first-name" type="text" required
+          /></label>
+          <label for="last-name"
+            >Ingresa tu apellido: <input id="last-name" type="text" required
+          /></label>
+          <label for="email"
+            >Ingresa tu Email: <input id="email" type="email" required
+          /></label>
+          <label for="new-password"
+            >Crea una nueva contrasena:
+            <input
+              id="new-password"
+              type="password"
+              pattern="[a-z0-5]{8,}"
+              required
+          /></label>
+        </fieldset>
+        <fieldset>
+          <legend>Account type (required)</legend>
+          <label for="personal-account"
+            ><input
+              id="personal-account"
+              type="radio"
+              name="account-type"
+              checked
+            />
+            Personal</label
+          >
+          <label for="business-account"
+            ><input id="business-account" type="radio" name="account-type" />
+            Business</label
+          >
+        </fieldset>
+        <fieldset>
+          <legend>Datos Adicionales</legend>
+          <label>Sube tu foto: <input type="file" /></label>
+          <label
+            >Ingresa tu edad (anios): <input type="number" min="13" max="120"
+          /></label>
+          <label
+            >How did you hear about us?
+            <select>
+              <option value="">(select one)</option>
+              <option value="1">freeCodeCamp News</option>
+              <option value="2">freeCodeCamp YouTube Channel</option>
+              <option value="3">freeCodeCamp Forum</option>
+              <option value="4">Other</option>
+            </select>
+          </label>
 
-        <footer class="footer_seccion">
-            <nav class="nav__footer">
-                <a href="#">Github</a>
-                <a href="#">Facebook</a>
-                <a href="#">x</a>
-            </nav>
-        </footer>
-    </div> <!-- contenedor__principal -->
-
-
-</body>
-
+          <h4>Ingresa tu mensaje:</h4>
+          <textarea></textarea>
+        </fieldset>
+      </form>
+    </div>
+    <!-- contenedor__principal -->
+  </body>
 </html>

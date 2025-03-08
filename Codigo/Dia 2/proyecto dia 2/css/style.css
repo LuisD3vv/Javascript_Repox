@@ -32,11 +32,10 @@ body {
 }
 h1 {
   margin: 0px auto;
-  border-left: solid 4px black;
-  border-top: solid 4px black;
-  border-right: solid 4px black;
-  padding: 0.5rem;
   border-radius: 5px;
+  padding: 1rem;
+  width: 60rem;
+  background-color: rgb(255, 255, 255, 50%);
 }
 .nav__principal {
   display: flex;
@@ -50,9 +49,18 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
+#titulo a {
+  text-decoration: none;
+  color: black;
+}
+#titulo a:hover {
+  text-shadow: 1px 1px 3px gold;
+  padding: 1rem;
+  font-size: 30px;
+}
 .title-bg {
-  background-color: rgb(95, 227, 227);
-  width: 70%;
+  background-color: rgb(34, 196, 196);
+  width: 90%;
   margin: 2rem auto;
   padding: 1rem;
 }
@@ -61,11 +69,12 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
   padding: 0.5rem;
   background-color: rgb(255, 255, 255, 50%);
   gap: 1rem;
+  border-radius: 5px;
 }
 .nav a {
   /* text-decoration: none; */
@@ -92,7 +101,12 @@ h1 {
   font-size: 15px;
 }
 
-@media (360px <= width <= 700px) {
+@media (360px <= width <= 730px) {
+  h1 {
+    border-left: solid 4px black;
+    border-top: solid 4px black;
+    border-right: solid 4px black;
+  }
   .nav__principal,
   .nav {
     display: flex;
@@ -114,6 +128,8 @@ h1 {
     background-color: rgb(255, 255, 255, 50%);
     width: 90%;
     padding: 1rem;
+    height: 5rem;
+    border: none;
   }
   a {
     gap: 1rem;
@@ -127,6 +143,20 @@ h1 {
   #titulo,
   .title-bg {
     width: 90%;
+  }
+}
+@media (min-width: 880px) {
+  .contenido {
+    height: 50rem;
+  }
+}
+@media (600px <= width <= 880px) {
+  .datos,
+  .fthing,
+  .desc_im {
+    width: 95%;
+    padding: unset;
+    margin: 0;
   }
 }
 
@@ -144,20 +174,21 @@ h1 {
 
 .contenido_principal h2 {
   border-left: solid 5px black;
-  border-right: solid 5px black;
-  width: 50%;
-  margin: 1rem auto;
-  padding: 1rem;
+  border-right: solid 7px black;
+  width: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
   text-transform: uppercase;
   background-color: rgba(251, 251, 251, 0.7);
 }
 .contenido {
   text-align: center;
   width: 95%;
-  height: 50rem;
+  height: auto;
   border: solid 5px black;
   margin: 3rem auto;
   background-color: rgb(242, 172, 172);
+  border-radius: 5px;
 }
 .datos {
   display: flex;
@@ -168,12 +199,13 @@ h1 {
 .datos article {
   padding: 1rem;
   width: 50rem;
-  height: 40rem;
+  height: 30rem;
   background-color: #9b5acf;
-  margin: 0 auto;
+  margin: 3rem auto;
   border: solid 4px black;
   align-content: center;
   text-transform: uppercase;
+  border-radius: 15px;
 }
 .fthing {
   display: flex;
@@ -184,12 +216,13 @@ h1 {
 .fthing article {
   padding: 1rem;
   width: 50rem;
-  height: 40rem;
-  margin: 0 auto;
+  height: 30rem;
+  margin: 3rem auto;
   border: solid 4px black;
   align-content: center;
   text-transform: uppercase;
   background-color: #4de783;
+  border-radius: 15px;
 }
 
 .desc_im {
@@ -206,12 +239,13 @@ h1 {
 .desc_im section {
   padding: 1rem;
   width: 50rem;
-  height: 40rem;
-  margin: 0 auto;
+  height: 30rem;
+  margin: 3rem auto;
   border: solid 4px black;
   align-content: center;
   text-transform: uppercase;
   background-color: #dbb407;
+  border-radius: 15px;
 }
 /*Estilos footer*/
 footer {
@@ -226,7 +260,7 @@ hr {
   width: 70%;
 }
 .footer-bg {
-  width: 095%;
+  width: 95%;
 }
 .nav__footer {
   display: flex;
@@ -329,4 +363,17 @@ input {
   background-color: #d1f0e4fc;
   width: 100%;
   padding: 1rem;
+}
+/*Formulario*/
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+fieldset {
+  width: 50%;
+  margin: 0 auto;
+}
+textarea {
+  width: 25rem;
+  height: 15rem;
 }
