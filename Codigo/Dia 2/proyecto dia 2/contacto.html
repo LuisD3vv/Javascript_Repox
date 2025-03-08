@@ -19,67 +19,54 @@
       </div>
     </header>
 
-    <div class="contenedor__principal">
-      <form method="post" action="https://register-demo.freecodecamp.org">
+    <div class="contenedor__principal--contacto">
+      <form class="formulario">
+        <!--Para crear un formulario-->
         <fieldset>
-          <legend>Ingresa tus datos</legend>
-          <label for="first-name"
-            >Ingresa tu primer Nombre:
-            <input id="first-name" type="text" required
-          /></label>
-          <label for="last-name"
-            >Ingresa tu apellido: <input id="last-name" type="text" required
-          /></label>
-          <label for="email"
-            >Ingresa tu Email: <input id="email" type="email" required
-          /></label>
-          <label for="new-password"
-            >Crea una nueva contrasena:
-            <input
-              id="new-password"
-              type="password"
-              pattern="[a-z0-5]{8,}"
-              required
-          /></label>
-        </fieldset>
-        <fieldset>
-          <legend>Account type (required)</legend>
-          <label for="personal-account"
-            ><input
-              id="personal-account"
-              type="radio"
-              name="account-type"
-              checked
-            />
-            Personal</label
-          >
-          <label for="business-account"
-            ><input id="business-account" type="radio" name="account-type" />
-            Business</label
-          >
-        </fieldset>
-        <fieldset>
-          <legend>Datos Adicionales</legend>
-          <label>Sube tu foto: <input type="file" /></label>
-          <label
-            >Ingresa tu edad (anios): <input type="number" min="13" max="120"
-          /></label>
-          <label
-            >How did you hear about us?
-            <select>
-              <option value="">(select one)</option>
-              <option value="1">freeCodeCamp News</option>
-              <option value="2">freeCodeCamp YouTube Channel</option>
-              <option value="3">freeCodeCamp Forum</option>
-              <option value="4">Other</option>
-            </select>
-          </label>
+          <!--nos srive para agrupar diferentes campos-->
+          <!--describir o dar indicaciones al usuario-->
+          <legend>Contactame llenando todos los campos</legend>
+          <div class="contenedor-campos">
+            <div class="campo">
+              <label>Nombre</label>
+              <!--se le conoce como etiqueta o indicacion-->
+              <input class="input-text" type="text" placeholder="Tu Nombre" />
+              <!--entrada de datos, text es el default-->
+            </div>
 
-          <h4>Ingresa tu mensaje:</h4>
-          <textarea></textarea>
+            <div class="campo">
+              <label>Telefono</label>
+              <input class="input-text" type="tel" placeholder="Tu Telefono" />
+              <!--la etiqueta placerholder. literalmente es como una indicación que se espera que se coloque en ese campo-->
+            </div>
+
+            <div class="campo">
+              <label>Correo</label>
+              <input class="input-text" type="email" placeholder="Tu Correo" />
+              <!--coloca el arroba de una fomra mas acesible-->
+            </div>
+
+            <div class="campo">
+              <label>Mensaje</label>
+              <textarea
+                placeholder="Escribe tu mensaje aqui. "
+                class="input-text"
+              ></textarea>
+            </div>
+          </div>
+          <!--contenedor campos-->
+          <div class="alinear-flex">
+            <input class="boton w-100" type="submit" value="Enviar" />
+          </div>
         </fieldset>
       </form>
+      <footer class="footer_seccion">
+        <nav class="nav__footer">
+          <a href="#">Github</a>
+          <a href="#">Facebook</a>
+          <a href="#">x</a>
+        </nav>
+      </footer>
     </div>
-    <!-- contenedor__principal -->
   </body>
 </html>
