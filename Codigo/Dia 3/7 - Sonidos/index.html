@@ -8,7 +8,7 @@ setTimeput, el cual dada una funcion y un tiempo, acabado tal timepo ejecutara l
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temporizador</title>
     <style>
-        audio::webkit-media-controls-panel {
+         audio::webkit-media-controls-panel { /* accedemos a el pseudoelemento que controla el estilo del reproductor, en este caso creo que es del google. el webkit */
             background-color: red;
         }
     </style>
@@ -17,11 +17,11 @@ setTimeput, el cual dada una funcion y un tiempo, acabado tal timepo ejecutara l
 <body>
     <input type="number" id="tiempoElegido" placeholder="Ingresa el valor" />
     <button onclick="comenzarTiempo()">Alarma</button>
-    <h1 id="textoAlarma" style="color: red;">APAGADO</h1>
+    <h1 id="textoAlarma" style="color: red;">APAGADO</h1>   <!--estilo inline -->
 
 <audio id="audioAlarma">
     <source src="audio/alarma.mp3"  type="audio/mpeg">
-    No se ha podido reproducir.
+   No se ha podido reproducir. <!-- mensaje por si no carga el audio -->
 </audio>
 
     <script>
@@ -35,7 +35,7 @@ setTimeput, el cual dada una funcion y un tiempo, acabado tal timepo ejecutara l
         function tiempoCumplido() {
             elementoTextoAlarma.textContent = "ENCENDIDO";
             elementoTextoAlarma.style.color = "green";//cambiar color del elemento desde javascript
-            elementoSonidoAlarma.play();
+            elementoSonidoAlarma.play(); // reproducir el audio cuando se acabe el tiempo.
         }
     </script>
 </body>

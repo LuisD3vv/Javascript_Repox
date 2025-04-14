@@ -6,42 +6,66 @@
     <title>Proyecto Dia 3</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="comenzarConteo()">
+<body onload="comenzarReloj()">
+    <script>
+        //Funciones para inicializar y actualizar el temporizador
+         function comenzarReloj(){
+            setInterval(reversa, 1000 * 1);
+        }
+            //funcion flecha, o funcion anonima
+            let tiempo = 30;
+            const regresiva = setInterval(() => {
+                let elementotempo = document.getElementById('tempo');
+                tiempo--;
+                elementotempo.textContent = tiempo;
+
+
+                if(tiempo <= 0) {
+                    clearInterval(regresiva); // parar el intervalo
+                    elementotempo.textContent = "Se acabo!";
+                    elementotempo.style.color = "red"
+                }
+            },1000)
+
+            
+                /*
+                let fecha = new Date();
+                Por afuera se investigo el toLocateDateString(es-mx);
+                */
+        
+    </script>
     <div class="rellenar">
         <section class="title"> 
-            <h1>Cuestionario</h1>
-            <p>contesta correctamente las siguientes preguntas</p>
+            <h1>Contesta las preguntas en 30s</h1>
         </section>
     </div>
    
     <div class="contenedor">
       
        <section class="Qtions">
-        <p>Tienes 30 segundos para responderlas.</p>
-
         <div class="campo">
             <h3>pregunta 1</h3>
-            <label for="pre1">¿Quien es Link?</label><br>
+            <label for="pre1">¿Quien es Link?</label>
             <input type="text" id="pre1" name="pre1">
         </div>
         <div class="campo">
             <h3>pregunta 2</h3>
-            <label for="pre2">¿Que es CSS?</label><br>
+            <label for="pre2">¿Que es CSS?</label>
             <input type="text" id="pre2" name="pre2">
         </div>
          <div class="campo">
             <h3>pregunta 3</h3>
-            <label for="pre3">¿Sabes Python?</label><br>
+            <label for="pre3">¿Sabes Python?</label>
             <input type="text" id="pre3" name="pre3">
         </div>
          <div class="campo">
             <h3>pregunta 4</h3>
-            <label for="pre4">¿El mejor fallout?</label><br>
+            <label for="pre4">¿El mejor fallout?</label>
             <input type="text" id="pre4" name="pre4">
         </div> 
         <div class="campo">
             <h3>pregunta 5</h3>
-            <label for="pre5">¿porque new vegas?</label><br>
+            <label for="pre5">¿porque new vegas?</label>
             <input type="text" id="pre5" name="pre5">
         </div>
         <br>
@@ -53,17 +77,15 @@
         <p>Completa las preguntas lo antes posible</p>
         </div>
         <div class="areaTemp">
-
-        </div>
-        <div class="areaTemp">
-            
-        </div>
-        <div class="areaTemp">
-            
+            <div class="section_tempo">
+                <h2 id="tempo">00</h2>
+            </div>
         </div>
         <button class="Reiniciar">Reiniciar</button>
+        
 
        </section>
+       
     </div>
 </body>
 </html>
