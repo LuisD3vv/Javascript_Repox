@@ -7,17 +7,27 @@ setTimeput, el cual dada una funcion y un tiempo, acabado tal timepo ejecutara l
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temporizador</title>
+    <style>
+        audio::webkit-media-controls-panel {
+            background-color: red;
+        }
+    </style>
 </head>
 
 <body>
-    <input type="number" id="tiempoElegido" placeholder="Ingresa el valor" min="1">
+    <input type="number" id="tiempoElegido" placeholder="Ingresa el valor" />
     <button onclick="comenzarTiempo()">Alarma</button>
     <h1 id="textoAlarma" style="color: red;">APAGADO</h1>
 
+<audio id="audioAlarma">
+    <source src="audio/alarma.mp3"  type="audio/mpeg">
+    No se ha podido reproducir.
+</audio>
 
     <script>
         let elementoSegundos = document.getElementById("tiempoElegido");
         let elementoTextoAlarma = document.getElementById("textoAlarma");
+        let elementoSonidoAlarma = document.getElementById("audioAlarma");
 
         function comenzarTiempo() {
             setTimeout(tiempoCumplido, 1000 * elementoSegundos.value); // segundos = 1000 milisegundos
@@ -25,6 +35,7 @@ setTimeput, el cual dada una funcion y un tiempo, acabado tal timepo ejecutara l
         function tiempoCumplido() {
             elementoTextoAlarma.textContent = "ENCENDIDO";
             elementoTextoAlarma.style.color = "green";//cambiar color del elemento desde javascript
+            elementoSonidoAlarma.play();
         }
     </script>
 </body>
