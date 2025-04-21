@@ -1,91 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto Dia 3</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body onload="comenzarReloj()">
-    <script>
-        //Funciones para inicializar y actualizar el temporizador
-         function comenzarReloj(){
-            setInterval(reversa, 1000 * 1);
-        }
-            //funcion flecha, o funcion anonima
-            let tiempo = 30;
-            const regresiva = setInterval(() => {
-                let elementotempo = document.getElementById('tempo');
-                tiempo--;
-                elementotempo.textContent = tiempo;
-
-
-                if(tiempo <= 0) {
-                    clearInterval(regresiva); // parar el intervalo
-                    elementotempo.textContent = "Se acabo!";
-                    elementotempo.style.color = "red"
-                }
-            },1000)
-
-            
-                /*
-                let fecha = new Date();
-                Por afuera se investigo el toLocateDateString(es-mx);
-                */
-        
-    </script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <!--Javascript relink-->
+  </head>
+  <body onload="comenzarReloj()">
     <div class="rellenar">
-        <section class="title"> 
-            <h1>Contesta las preguntas en 30s</h1>
-        </section>
+       <audio id="audioAlarma">
+    <source src="audio/gameover.mp3"  type="audio/mpeg">
+    No se ha podido reproducir.
+</audio>
+      <section class="title">
+        <h1 class="gentitle">Fast Quest en 30 segundos</h1>
+      </section>
     </div>
-   
+
     <div class="contenedor">
-      
-       <section class="Qtions">
+      <section class="Qtions">
         <div class="campo">
-            <h3>pregunta 1</h3>
-            <label for="pre1">¿Quien es Link?</label>
-            <input type="text" id="pre1" name="pre1">
+          <h3>pregunta 1</h3>
+          <label for="pre1">¿Cuando acabo la ll Guerra mundial?</label>
+          <input type="text" id="pre1" name="pre1" />
         </div>
         <div class="campo">
-            <h3>pregunta 2</h3>
-            <label for="pre2">¿Que es CSS?</label>
-            <input type="text" id="pre2" name="pre2">
+          <h3>pregunta 2</h3>
+          <label for="pre2">¿Quien invento la bombilla?</label>
+          <input type="text" id="pre2" name="pre2" />
         </div>
-         <div class="campo">
-            <h3>pregunta 3</h3>
-            <label for="pre3">¿Sabes Python?</label>
-            <input type="text" id="pre3" name="pre3">
-        </div>
-         <div class="campo">
-            <h3>pregunta 4</h3>
-            <label for="pre4">¿El mejor fallout?</label>
-            <input type="text" id="pre4" name="pre4">
-        </div> 
         <div class="campo">
-            <h3>pregunta 5</h3>
-            <label for="pre5">¿porque new vegas?</label>
-            <input type="text" id="pre5" name="pre5">
+          <h3>pregunta 3</h3>
+          <label for="pre3">¿De donde es Adolf Hitler?</label>
+          <input type="text" id="pre3" name="pre3" />
         </div>
-        <br>
-        <button>enviar</button>
-       </section>
-       <section class="temporizador">
+        <div class="campo">
+          <h3>pregunta 4</h3>
+          <label for="pre4">¿El mejor superheroe?</label>
+          <input type="text" id="pre4" name="pre4" />
+        </div>
+        <div class="campo">
+          <h3>pregunta 5</h3>
+          <label for="pre5">¿Cual es el VideoJuego mas vendido?</label>
+          <input type="text" id="pre5" name="pre5" />
+        </div>
+        <br />
+        <button class="finalizar" onclick="fincuest()">enviar</button>
+      </section>
+      <section class="temporizador">
         <div class="temp">
-            <h1 class="title_temp">Tiempo Restante</h1>
-        <p>Completa las preguntas lo antes posible</p>
+          <h2 class="title_temp">Tiempo Restante</h2>
+          <p class="descrip">Completa las preguntas lo antes posible</p>
         </div>
         <div class="areaTemp">
-            <div class="section_tempo">
-                <h2 id="tempo">00</h2>
-            </div>
+          <div class="section_tempo">
+            <h2 id="tempo">00</h2>
+          </div>
         </div>
-        <button class="Reiniciar">Reiniciar</button>
-        
-
-       </section>
-       
+        <button class="Reiniciar" onclick="reiniciar()">
+          Volver a intentar
+        </button>
+      </section>
     </div>
-</body>
+    <p class="gratefoul">
+      Creado con &#128420; por
+      <a style="text-decoration: none;" target="_blank" href="https://github.com/LuisD3vv"
+        ><span>LissandroD3v.</span></a
+      >
+    </p>
+  </body>
 </html>
