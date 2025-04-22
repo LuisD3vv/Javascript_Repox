@@ -1,8 +1,3 @@
-//Funciones para inicializar y actualizar el temporizador
-function comenzarReloj() {
-  setInterval(reversa, 1000 * 1);
-}
-//funcion flecha, o funcion anonima
 let tiempo = 31;
 const regresiva = setInterval(() => {
   let elementoAlarma = document.getElementById("audioAlarma");
@@ -59,6 +54,13 @@ function fincuest() {
         " Fecha de hoy " +
         dia_hoy
     );
+  }
+  //Pausar el tiempo si el boton es presionado
+
+  if (repuesta1 || repuesta2 || repuesta3 || repuesta4 || repuesta5 != null) {
+    alert("Cuenta regresiva pausada");
+    clearInterval(regresiva); // detener conteo cuando se contesten todas
+    return;
   }
 }
 ("\n");
