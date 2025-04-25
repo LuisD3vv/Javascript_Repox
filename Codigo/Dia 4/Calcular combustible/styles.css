@@ -1,0 +1,20 @@
+button {
+  background-color: rgb(51, 112, 133);
+  color: white;
+  width: 10rem;
+  padding: 10px;
+  border: medium;
+  cursor: pointer;
+}
+button:active {
+  cursor: wait;
+}
+body {
+    background-color: rgb(154, 194, 207);
+}
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

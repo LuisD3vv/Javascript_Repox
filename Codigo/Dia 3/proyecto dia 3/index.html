@@ -10,50 +10,75 @@
   </head>
   <body onload="comenzarReloj()">
     <div class="rellenar">
-       <audio id="audioAlarma">
-    <source src="audio/gameover.mp3"  type="audio/mpeg">
-    No se ha podido reproducir.
-</audio>
-      <section class="title">
-        <h1 class="gentitle">Fast Quest en 30 segundos</h1>
-      </section>
+      <audio id="audioAlarma">
+        <source src="audio/gameover.mp3" type="audio/mpeg" />
+        No se ha podido reproducir.
+      </audio>
     </div>
+    <section class="title">
+      <h1 class="gentitle">Fast Quest en 30 segundos</h1>
+    </section>
 
     <div class="contenedor">
       <section class="Qtions">
         <div class="campo">
           <h3>pregunta 1</h3>
           <div class="centrar">
-          <label for="pre1">¿Cuando acabo la ll Guerra mundial?</label>
-          <input type="text" id="pre1" name="pre1" placeholder="ingresa tu repuesta." />
-        </div>
+            <label for="pre1">¿Cuando acabo la ll Guerra mundial?</label>
+            <input
+              type="number"
+              id="pre1"
+              name="pre1"
+              placeholder="ingresa tu repuesta."
+            />
+          </div>
         </div>
         <div class="campo">
           <h3>pregunta 2</h3>
           <div class="centrar">
-          <label for="pre2">¿Quien invento la bombilla?</label>
-          <input type="text" id="pre2" name="pre2" placeholder="ingresa tu repuesta." />
-        </div>
+            <label for="pre2">¿Quien invento la bombilla?</label>
+            <input
+              type="text"
+              id="pre2"
+              name="pre2"
+              placeholder="ingresa tu repuesta."
+            />
+          </div>
         </div>
         <div class="campo">
           <h3>pregunta 3</h3>
           <div class="centrar">
-          <label for="pre3">¿De donde es Adolf Hitler?</label>
-          <input type="text" id="pre3" name="pre3" placeholder="ingresa tu repuesta." />
-        </div>
+            <label for="pre3">¿De donde es Adolf Hitler?</label>
+            <input
+              type="text"
+              id="pre3"
+              name="pre3"
+              placeholder="ingresa tu repuesta."
+            />
+          </div>
         </div>
         <div class="campo">
           <h3>pregunta 4</h3>
           <div class="centrar">
-          <label for="pre4">¿Capital de Grecia?</label>
-          <input type="text" id="pre4" name="pre4" placeholder="ingresa tu repuesta." />
-        </div>
+            <label for="pre4">¿Capital de Grecia?</label>
+            <input
+              type="text"
+              id="pre4"
+              name="pre4"
+              placeholder="ingresa tu repuesta."
+            />
+          </div>
         </div>
         <div class="campo">
           <h3>pregunta 5</h3>
           <div class="centrar">
-          <label for="pre5">¿Cual es el VideoJuego mas vendido?</label>
-          <input type="text" id="pre5" name="pre5" placeholder="ingresa tu repuesta." />
+            <label for="pre5">¿Cual es el VideoJuego mas vendido?</label>
+            <input
+              type="text"
+              id="pre5"
+              name="pre5"
+              placeholder="ingresa tu repuesta."
+            />
           </div>
         </div>
         <br />
@@ -61,24 +86,26 @@
       </section>
       <section class="temporizador">
         <div class="bakchelp">
-        <div class="temp">
-          <h2 class="title_temp">Tiempo Restante</h2>
-          <p class="descrip">Completa las preguntas lo antes posible</p>
-        </div>
-        <div class="areaTemp">
-          <div class="section_tempo">
-            <h2 id="tempo">00</h2>
+          <div class="temp">
+            <h2 class="title_temp">Tiempo Restante</h2>
           </div>
+          <div class="areaTemp">
+            <div class="section_tempo">
+              <h2 id="tempo">00</h2>
+            </div>
           </div>
         </div>
-        <button class="Reiniciar" onclick="reiniciar()">
+        <button class="finalizar" onclick="reiniciar()">
           Volver a intentar
         </button>
       </section>
     </div>
     <p class="gratefoul">
       Creado con &#128420; por
-      <a style="text-decoration: none;" target="_blank" href="https://github.com/LuisD3vv"
+      <a
+        style="text-decoration: none"
+        target="_blank"
+        href="https://github.com/LuisD3vv"
         ><span>LissandroD3v.</span></a
       >
     </p>

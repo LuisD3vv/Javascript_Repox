@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parametros</title>
+  </head>
+  <body>
+    <p>Primer Numero</p>
+    <input type="number" id="primerNumero" />
+
+    <p>Segundo Numero</p>
+    <input type="number" id="SegundoNumero" />
+    <button onclick="textoResultado()">Calcular</button>
+    <h2 id="textoResultado"></h2>
+
+    <script>
+      function sumar(numero1, numero2) {
+        // resultado = +numero1 + +numero2; //convertir en numero si el string simboliza un numero
+        resultado = parseInt(numero1) + parseInt(numero2); //casting
+        return resultado;
+      }
+      function textoResultado() {
+        let elemento1 = document.getElementById("primerNumero");
+        let elemento2 = document.getElementById("SegundoNumero");
+        let elementoTexto = document.getElementById("textoResultado");
+
+        let elemento_suma = sumar(elemento1.value, elemento2.value);
+
+        elementoTexto.textContent = "suma " + elemento_suma;
+      }
+    </script>
+  </body>
+</html>

@@ -23,14 +23,17 @@ function fincuest() {
   let repuesta4 = document.getElementById("pre4").value;
   let repuesta5 = document.getElementById("pre5").value;
 
-  const fecha = new Date();
+  const fecha = new Date(); // Crear el objeto date de donde extraeremos la fecha y hora
 
-  let horas = fecha.getHours(); // imprimir con string.padstart(2, "0")
+  /*
+  let horas = fecha.getHours(); // Transformar en  y colocarle la propiedad string.padstart(2, "0")
   let minutos = fecha.getMinutes();
   let segundos = fecha.getSeconds();
+  */
 
   let dia_hoy = fecha.toLocaleDateString("es-mx"); // Fecha local
 
+  //Si las respuestas estan vacias.
   if (!repuesta1 || !repuesta2 || !repuesta3 || !repuesta4 || !repuesta5) {
     alert("Por lo menos intentalo");
     return;
@@ -55,8 +58,8 @@ function fincuest() {
         dia_hoy
     );
   }
-  //Pausar el tiempo si el boton es presionado
 
+  //Pausar el tiempo si el boton es presionado (si las repuestas fueron introducidas)
   if (repuesta1 || repuesta2 || repuesta3 || repuesta4 || repuesta5 != null) {
     alert("Cuenta regresiva pausada");
     clearInterval(regresiva); // detener conteo cuando se contesten todas
@@ -64,9 +67,10 @@ function fincuest() {
   }
 }
 ("\n");
+//reiniciar el navegador cuando se precione el boton intentar de nuevo
 function reiniciar() {
   alert("Juego Reiniciado");
-  location.reload();
+  location.reload(); // se logra con esto
 }
 // reiniciar funcion
 

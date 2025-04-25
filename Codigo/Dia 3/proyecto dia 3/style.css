@@ -6,11 +6,11 @@ html {
   font-size: 62.5%;
 }
 .gentitle {
+  text-align: center;
+  margin: 1rem auto 1rem;
+  width: 40rem;
   background-color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-radius: 5px;
 }
 .contenedor {
   display: grid;
@@ -20,9 +20,11 @@ html {
   background: linear-gradient(rgb(248, 85, 85) 50%, #e5bb89);
   margin: auto;
   padding: 1.5rem;
-  gap: 15px;
   border-radius: 1rem;
   transition: ease-in-out 1s;
+  border-right: 5px solid rgb(255, 255, 255);
+  border-bottom: 5px solid rgb(255, 255, 255);
+  border-bottom-right-radius: 15rem;
 }
 .contenedor:active {
   box-shadow: 0px 0px 4px 4px gold;
@@ -57,6 +59,7 @@ html {
   height: auto;
   border-bottom: 5px solid black;
   border-right: 5px solid rgb(255, 255, 255);
+  border-radius: 5px;
 }
 .temporizador:hover {
   box-shadow: 0px 0px 4px 4px rgb(0, 0, 0);
@@ -70,6 +73,7 @@ html {
   width: 65%;
   padding: 5px;
   margin: auto;
+  margin-bottom: 5px;
   border-radius: 5px;
   font-size: 20px;
 }
@@ -87,7 +91,7 @@ html {
   padding: 0.5rem;
   margin: 1rem auto;
   height: 12rem;
-  width: 35rem;
+  width: auto;
   border-radius: 5px;
   border-bottom: 5px solid black;
   border-bottom-left-radius: 10px;
@@ -96,8 +100,8 @@ html {
   cursor: pointer; /*Interesante*/
 }
 .campo:hover {
-  margin-top: 10px;
-  box-shadow: 0px 0px 4px 2px black;
+  box-shadow: 0px 0px 2px 2px black;
+  /* transform: rotate(5deg); */
 }
 .campo:active {
   box-shadow: 0px 0px 4px 4px gold;
@@ -164,8 +168,6 @@ label {
   margin: auto;
   width: 18rem;
   height: 5rem;
-  background-color: rgb(255, 0, 0);
-  box-shadow: 0px 0px 3px 2px black;
   margin-bottom: 16px;
   padding: 1rem;
   border-radius: 5px;
@@ -177,9 +179,9 @@ p {
 }
 .section_tempo {
   text-align: center;
-  width: auto;
-  margin: auto;
-  box-shadow: 0px 0px 6px 1px rgb(0, 0, 0);
+  width: 10rem;
+  margin: 0 auto;
+  box-shadow: 0px 0px 6px 1px rgb(255, 0, 0);
   border-radius: 5px;
   padding: 2px;
   background-color: rgb(255, 255, 255);
@@ -190,7 +192,6 @@ p {
   height: 3rem;
   background-color: red;
 }
-
 .gratefoul {
   text-align: center;
   font-size: 15px;
@@ -199,115 +200,134 @@ span {
   color: rgba(129, 0, 250, 0.993);
 }
 
-/*media queries*/
+/*media queries telefono*/
+@media screen and (max-width: 660px) {
+  .contenedor {
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    width: 90%;
+    max-width: 37rem;
+    height: auto;
+    box-shadow: 0px 0px 2px 3px BLACK;
+    background: linear-gradient(#e5bb89 5%, rgb(248, 85, 85) 90%);
+      border-bottom-right-radius: unset;
 
-@media screen {
-  @media (min-width: 365px) and (max-width: 500px) {
-    .contenedor {
-      grid-template-columns: 1fr;
-      width: 90%;
-      margin: 0 auto;
-      height: 100%;
-      border-top: 3px solid black;
-      background: linear-gradient(#e5bb89 5%, rgb(248, 85, 85) 90%);
-    }
-    .temporizador {
-      order: -1;
-      border-top: 5px double rgb(255, 255, 255);
-      border-left: 5px solid rgb(255, 255, 255);
-    }
-    .campo {
-      padding: 10px;
-      width: 95%;
-      height: 20rem;
-      box-shadow: 0px 0px 5px 4px rgb(36, 35, 35);
-      border-left: 5px solid rgb(0, 0, 0);
-      border-right: 5px solid rgb(0, 0, 0);
-      border-bottom: 5px solid white;
-      border-bottom-left-radius: 1rem;
-      border-bottom-right-radius: 1rem;
-    }
-    input {
-      width: auto;
-      margin-top: 1rem;
-      border-right: 2px solid black;
-    }
-    label {
-      text-align: center;
-      border-radius: 5px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      padding: 1rem;
-      font-size: 13px;
-      border-right: 2px solid black;
-    }
-    .campo h3 {
-      letter-spacing: 5px;
-      margin-bottom: 5rem;
-      background-color: rgb(234, 255, 0);
-      width: 95%;
-      padding: 0.5rem;
-      font-size: 13px;
-      text-transform: capitalize;
-      border-bottom: 5px solid black;
-      border-radius: 1rem;
-    }
-    .gentitle {
-      color: black;
-      width: 37rem;
-      padding: 4px;
-      margin-left: -12rem;
-      border-radius: 5px;
-      background: linear-gradient(
-        to right,
-        rgb(214, 250, 214),
-        rgb(233, 104, 104)
-      );
-    }
-
-    .temporizador {
-      padding: 1rem;
-      margin: auto;
-      height: 24rem;
-      width: 90%;
-      border-radius: 2rem;
-      border-bottom-right-radius: 15px;
-      border-bottom-left-radius: 15px;
-      border-color: 3px solid black;
-    }
-    .title_temp {
-      background-color: unset;
-      box-shadow: unset;
-    }
-    .bakchelp {
-      width: 90%;
-      margin: auto;
-      margin-bottom: 1rem;
-      border-radius: 5px;
-      padding: 1rem;
-      box-shadow: 0px 0px 1px 1px black;
-    }
-    .Reiniciar {
-      padding: 1.52rem;
-    }
-    .Reiniciar:active {
-      padding: 1rem;
-      height: 40px;
-      border-color: yellow;
-      margin-top: 10px;
-      border-width: 1px;
-      box-shadow: none;
-    }
-    .centrar {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 100%;
-    }
-    input::placeholder {
-      letter-spacing: 1px;
-      text-transform: capitalize;
-      text-shadow: 0px 0px 1px black;
-    }
   }
+  .temporizador {
+    width: 93%;
+    background: rgb(238, 91, 91);
+    order: -1;
+    border: unset;
+    max-height: 29rem;
+    position: sticky;
+    top: 1rem;
+    border: 3px solid black;
+  }
+  .temporizador:hover {
+    box-shadow: unset;
+  }
+  .temporizador:active {
+    box-shadow: unset;
+  }
+  .section_tempo {
+    width: 70%;
+  }
+  .Qtions {
+    margin: 0 auto;
+    width: 95%;
+  }
+  .campo {
+    width: auto;
+    height: auto;
+    border-left: 5px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top: 5px solid black;
+  }
+  .campo:hover {
+    box-shadow: unset;
+    /* transform: rotate(5deg); */
+  }
+  input {
+    width: auto;
+    margin-top: 1rem;
+    border-right: 2px solid black;
+  }
+  label {
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 1rem;
+    font-size: 13px;
+    border-right: 2px solid black;
+  }
+  .campo h3 {
+    letter-spacing: 5px;
+    margin-bottom: 5rem;
+    background-color: rgb(234, 255, 0);
+    width: 95%;
+    padding: 0.5rem;
+    font-size: 13px;
+    text-transform: capitalize;
+    border-top: 3px solid black;
+    border-radius: 5px;
+  }
+  .title_temp {
+    background-color: unset;
+    box-shadow: unset;
+  }
+  .bakchelp {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  .Reiniciar {
+    padding: 1.52rem;
+  }
+  .Reiniciar:active {
+    padding: unset;
+    height: unset;
+    border-color: yellow;
+    margin-top: unset;
+    border-width: unset;
+    box-shadow: none;
+    max-height: 30px;
+    margin-top: 5px;
+    border-width: 1px;
+  }
+  button:active {
+    max-height: 30px;
+    border-color: yellow;
+    margin-top: 5px;
+    border-width: 1px;
+    box-shadow: none;
+  }
+  .centrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+  input::placeholder {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 1px black;
+  }
+  .finalizar {
+    width: 100%;
+  }
+}
+
+/*media querie Tablet*/
+@media screen and (min-width: 660px) and (max-width: 1080px) {
+    .contenedor {
+    grid-template-columns: 1fr 1fr;
+     border-bottom-right-radius: unset;
+
+}
+
 }
