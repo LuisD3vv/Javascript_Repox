@@ -6,5 +6,5 @@ function CalcularLitros() {
     let canLitros = cantTk / 8.8;
 
     var resultado = document.getElementById("textoResultado");
-    resultado.textContent = "Carga " + canLitros + " Litros de Gasofa";
-}
+    resultado.textContent = "Carga " + Math.ceil(canLitros) + " Litros de Gasofa";
+}// con ceil redondearemos hacia arriba siemore

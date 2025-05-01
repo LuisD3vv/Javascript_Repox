@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <h1>Calculadora sencilla de a madres</h1>
+    <div class="contenedor">
+      <div class="inputs">
+        <div class="operador1 entrada">
+          <label for="ingreso1" class="operando1">Num 1</label>
+          <!-- no sustituir con placeholder, son diferentes usos -->
+          <input type="text" placeholder="Ingresa el numero 1" id="ingreso1" />
+        </div>
+        <div class="operador2 entrada">
+          <label for="ingreso2" class="operando2">Num 2</label>
+          <input
+            type="number"
+            placeholder="Ingresa el numero 2"
+            id="ingreso2"
+          />
+        </div>
+      </div>
+
+      <div class="operaciones_basicas">
+        <div class="text basic">
+          <button id="botonSuma">+</button>
+        </div>
+        <div class="resta basic">
+          <button id="botonResta">-</button>
+        </div>
+        <div class="multi basic">
+          <button id="botonMulti">*</button>
+        </div>
+        <div class="division basic">
+          <button id="botonDivi">/</button>
+        </div>
+      </div>
+
+      <div class="operacion_math">
+        <div class="potencia math">
+          <button id="botonPot">Potencia</>
+        </div>
+        <div class="raiz math">
+          <button id="botonRaz">Raiz</>
+        </div>
+        <div class="absolute math">
+          <button id="botonAbs">Absoluto</>
+        </div>
+        <div class="random math">
+          <button id="botonRand">Random</>
+        </div>
+      </div>
+      <div class="resultado-cont">
+        <p id="resultado">00</p>
+      </div>
+      <div class="operaciones_redondeo">
+        <div class="round extra">
+          <button id="botonRo">round</>
+        </div>
+        <div class="floor extra">
+          <button id="botonPiso">floor</button>
+        </div>
+        <div class="ceil extra">
+          <button id="botontecho">ceil</but>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <!--Contenedor general-->
+    <script src="script.js"></script>
+    <p class="gratefoul">
+      Creado sin &#128420; por
+      <a
+        style="text-decoration: none"
+        target="_blank"
+        href="https://github.com/LuisD3vv"
+        ><span>LissandroD3v.</span></a
+      >
+    </p>
+  </body>
+</html>
+
+<!--Repasar contenidos de etiquetas vistos en el video-->
+
+<!-- email: Campo para introducir una dirección de correo electrónico.
+  El valor introducido se valida para que contenga una cadena vacía
+  o una dirección de correo válida antes de enviarse.
+  Las pseudo-clases :valid y :invalid son aplicadas segun corresponda.
+-->
