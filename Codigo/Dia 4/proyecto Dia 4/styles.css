@@ -1,25 +1,31 @@
 h1 {
   text-align: center;
-  background-color: rgb(106, 42, 224);
-  border-top: 5px solid black;
-  width: 55%;
-  margin:  0 auto;
+  background: transparent;
+  border-top: 2px solid rgb(248, 248, 248);
+  width: auto;
+  max-width: 30rem;
+  margin: 3rem auto;
   color: white;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 4px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-style: italic;
 }
 body {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #222;
+  color: #a09a9a;
 }
 .contenedor {
   margin: 3rem auto;
   width: 22rem;
   height: auto;
-  box-shadow: 0px 0px 4px 3px rgb(192, 191, 191);
-  padding: 5px;
+  padding: 1rem;
   border-radius: 5px;
+  box-shadow: 0px 0px 5px 4px rgb(202, 202, 231);
 }
 .inputs {
+    font-style: italic;
+
   display: flex;
   flex-flow: row nowrap;
   gap: 5px;
@@ -27,7 +33,7 @@ body {
 .entrada {
   border: 2px solid rgb(91, 0, 209);
   width: 1rem;
-  height: 3rem;
+  height: 3.5rem;
   border-radius: 5px;
 }
 .operador1 {
@@ -44,7 +50,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 20px;
-  gap: 5px;
+  gap: 15px;
 }
 .basic {
   width: auto;
@@ -53,18 +59,17 @@ body {
 .operacion_math {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5px 5px;
+  gap: 5px 10px;
 }
 .math {
   font-weight: bold;
   align-content: center;
   color: white;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 15px;
   border-radius: 5px;
   background-color: rgb(167, 88, 219);
   height: 5rem;
-  width: auto;
 }
 .resultado-cont {
   margin-top: 1.2rem;
@@ -83,19 +88,18 @@ body {
   color: red;
   padding: 5px;
   border-top-left-radius: 5px;
-
 }
 .operaciones_redondeo {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+  gap: 10px;
 }
 .extra {
   color: white;
   text-align: center;
   border-radius: 5px;
-  margin-top: 5px;
-  width: auto;
+  margin-top: 10px;
+  width: 7rem;
   height: 4rem;
   background-color: rgb(167, 88, 219);
 }
@@ -117,36 +121,59 @@ body {
 }
 #ingreso1,
 #ingreso2 {
-  border: 1px solid rgb(255, 255, 255);
-  border-top: 1px solid black;
+  border: none;
+  margin-top: 10px;
   height: 25px;
   width: 95%;
+  text-align: right;
 }
 .operando1,
 .operando2 {
-  margin-left: 4px;
+  margin-left: 39px;
   font-weight: bold;
+  letter-spacing: 3px;
 }
 #resultado {
   text-align: end;
   margin-right: 1rem;
-  font-size: 17px;
+  font-size: 27px;
   font-weight: bold;
+
 }
 button {
+  box-shadow: 0px 3px 1px rgba(255, 255, 255, 0.133);
   background-color: rgb(167, 88, 219);
   width: 100%;
   height: 100%;
   border-radius: 5px;
   border: none;
   font-size: 2rem;
-  color: white;
+  color: #eee;
 }
 button:active {
-transform: scale(95%
-);}
+  transform: scale(90%);
+  background: transparent;
+}
 
 .gratefoul {
   text-align: center;
   font-size: 18px;
+  color: #eee;
+}
+.gratefoul:active {
+  color: red;
+}
+span {
+  color: rgb(157, 82, 238);
+}
+label {
+  color: white;
+}
+input {
+  background-color: transparent;
+  color: #eee;
+}
+input::placeholder {
+  color: rgb(224, 205, 205);
+  text-align: center;
 }

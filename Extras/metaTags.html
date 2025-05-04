@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- metatags mas usados-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--adaptar pagina a diferentes dispositivos-->
+    <meta
+      name="description"
+      content="esta pagina se trata sobre el uso de las etiquetas meta, las cuales nos sirven para daptar y codificar ciertas caracteristicas de nuestro sitio"
+    />
+    <meta name="author" content="Lissandro" />
+    <!--Autor de la pagina-->
+    <meta name="keywords" content="pagina, prueba,css,html" />
+    <!--Algunas etiquetas que le sirven a nuestro navegador-->
+    <meta name="robots" content="noimageindex" />
+    <!--no indexar pagina o imagenes-->
+    <!--Meta etiquetas para datos externos o enlaces a nuestra pagina-->
+    <meta name="OG:TITLE" content="titulo que se mostrara" />
+    <meta name="OG:IMAGE" content="imagen que se mostrara" />
+    <meta
+      name="OG:DESCRIPTION"
+      content="descripcion que tendra al colocar el raton o enlace "
+    />
+    <meta name="OG:URL" content="url original" />
+    <link rel="icon" type="image/png" />
+    <!--Icono favicon preferiblemente de 32x32 o 64x64px-->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Imagenes</title>
+  </head>
+  <body>
+    <form>
+      <h2>Formulario de contacto</h2>
+
+      <div class="form_input">
+        <input type="text" placeholder="Nombre completo" />
+      </div>
+      <div class="form_input">
+        <input type="email" placeholder="Email" />
+      </div>
+      <div class="form_input">
+        <textarea
+          name=""
+          id=""
+          placeholder="Deja tu mensaje"
+          maxlength="140"
+        ></textarea>
+        <img
+          width="200"
+          style="margin-top: 1rem"
+          src="gato1.jpg"
+          alt=""
+        />
+        <!-- 
+		tambien se puede trabajar por cantidad de lineas con la propiedad row(cuantas lienas puede escribir)
+		disabled
+		readonly
+		-->
+      </div>
+    </form>
+    <script>
+      let miImage = document.querySelector("img");
+      miImage.onclick = function () {
+        let miSrc = miImage.getAttribute("src");
+        if (miSrc === "gato1.jpg") {
+          miImage.setAttribute("src", "gato2.jpg");
+        } else {
+          miImage.setAttribute("src", "gato1.jpg");
+        }
+      };
+    </script>
+  </body>
+</html>
