@@ -3,11 +3,11 @@ h1 {
   background: transparent;
   border-top: 2px solid rgb(248, 248, 248);
   width: auto;
-  max-width: 30rem;
-  margin: 3rem auto;
+  max-width: 32rem;
+  margin: 2rem auto;
   color: white;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   font-style: italic;
 }
 body {
@@ -16,7 +16,7 @@ body {
   color: #a09a9a;
 }
 .contenedor {
-  margin: 3rem auto;
+  margin: 2rem auto;
   width: 22rem;
   height: auto;
   padding: 1rem;
@@ -176,4 +176,14 @@ input {
 input::placeholder {
   color: rgb(224, 205, 205);
   text-align: center;
+}
+.teclado_numerico {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px 10px
+  ;
+}
+#cero {
+ grid-column: 1/ 4;
 }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <meta
+      name="description"
+      content="Esta pagina tiene como utilidad calcular el imc de una persona de manera eificiente y sencilla"
+    />
+    <meta name="author" content="Lissandro" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="img/monitoFavicon.png" />
+    <script src="main.js"></script>
+    <title>Calculadora de IMC</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <h3></h3>
+      <!--no borrar -->
+      <div class="datos">
+        <div class="personal">
+          <div>
+            <label for="peso">Ingresa tu Peso</label>
+            <input
+              type="text"
+              placeholder="Ingresa tu Peso"
+              id="peso"
+              name="peso"
+              autocomplete="off"
+            />
+          </div>
+          <div>
+            <label for="altura">Ingresa tu Altura</label>
+            <input
+              type="text"
+              placeholder="Ingresa tu Altura"
+              id="altura"
+              name="altura"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div class="button_bg">
+          <button class="boton" onclick="calcular()">Calcular</button>
+        </div>
+      </div>
+
+      <div class="are_result">
+        <section class="resultado">
+          <h2 class="result_title">Resultado</h2>
+          <p id="result">---</p>
+        </section>
+        <section class="contendor_imagen-resultado">
+          <div class="bgimagen">
+            <img
+              class="imagencita"
+              src="img/Gaticoesperando.webp"
+              alt="imagen resultado"
+            />
+          </div>
+        </section>
+      </div>
+      <div class="author">
+        <h1></h1>
+      </div>
+    </div>
+  </body>
+</html>
