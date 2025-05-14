@@ -184,14 +184,18 @@ section {
   padding: 5px;
   color: rgb(255, 245, 245);
   font-size: 1.4rem;
+  box-shadow: 0px 0px 4px 1px black;
+  width: auto;
+  border-bottom: 2px solid rgb(73, 65, 65);
+
 }
 .contendor_imagen-resultado {
   width: 16rem;
   height: 15rem;
 }
 .bgimagen {
-  width: 16rem;
-  height: 15rem;
+  width: 15rem;
+  height: auto;
 }
 .imagencita {
   border: 3px solid rgb(0, 0, 0);
@@ -212,12 +216,24 @@ section {
 }
 .resultado {
   box-shadow: 0px 0px 4px 2px black;
-  width: 10rem;
+  width: 13rem;
   height: 12.2rem;
+
 }
 .resultado h1 {
   color: black;
   margin-top: 10px;
+  letter-spacing: 2px;
+}
+.resultado h2 {
+  letter-spacing: 4px;
+  box-shadow: 0px 4px 1px black;
+  padding: 10px;
+  border-radius: 10px;
+  width: auto;
+  margin: 10px auto;
+  font-size: 20px;
+
 }
 /* Investigar nuevas propiedades
 position
@@ -260,6 +276,12 @@ top: 0;
   transition: ease 3s;
 }
 @media (max-width: 45rem) {
+  .result_title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(239, 239, 239);
+    letter-spacing: 2px;
+  }
   .contenedor {
     width: 95%;
     margin: 0 auto;
@@ -295,10 +317,12 @@ top: 0;
     border-left: 4px solid #4369f3;
     border-right: 4px solid #f91616;
     border-radius: unset;
+    text-transform: capitalize;
   }
   input::placeholder {
-    letter-spacing: 7px;
+    letter-spacing: 3px;
     font-weight: bold;
+    font-size: 20px;
   }
   .resultado {
     width: 90%;
@@ -313,4 +337,9 @@ top: 0;
   .boton {
     width: 100%;
   }
+  #result {
+    border-left: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid rgb(255, 255, 255);
+    width: 90%;
+}
 }

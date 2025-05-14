@@ -1,14 +1,12 @@
 h1 {
   text-align: center;
   background: transparent;
-  border-top: 2px solid rgb(248, 248, 248);
-  width: auto;
-  max-width: 32rem;
-  margin: 2rem auto;
   color: white;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  font-style: italic;
+  height: auto;
+  margin-top: -5px;
+  box-shadow: 0px 0px 5px 3px black;
+  padding: 10px;
+  border-radius: 5px;
 }
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -21,17 +19,18 @@ body {
   height: auto;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px 4px rgb(202, 202, 231);
+  box-shadow: 0px 0px 5px 2px rgba(202, 202, 231, 0.418);
 }
 .inputs {
-    font-style: italic;
-
+  font-style: italic;
   display: flex;
   flex-flow: row nowrap;
   gap: 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.418);
+  padding: 5px;
+  border-radius: 10px;
 }
 .entrada {
-  border: 2px solid rgb(91, 0, 209);
   width: 1rem;
   height: 3.5rem;
   border-radius: 5px;
@@ -68,13 +67,13 @@ body {
   text-align: center;
   margin-top: 15px;
   border-radius: 5px;
-  background-color: rgb(167, 88, 219);
+  background-color: rgb(134, 84, 168);
   height: 5rem;
 }
 .resultado-cont {
   margin-top: 1.2rem;
   border-radius: 5px;
-  border: 2px solid rgb(160, 62, 226);
+  border: 2px solid rgb(143, 0, 238);
   width: 100%;
   height: 3rem;
   align-content: center;
@@ -129,36 +128,39 @@ body {
 }
 .operando1,
 .operando2 {
-  margin-left: 39px;
+  background-color: #eeeeee3a;
+  padding: 6px;
+  box-shadow: 0px 0px 3px 1px black;
   font-weight: bold;
-  letter-spacing: 3px;
+  margin-left: 4rem;
 }
 #resultado {
   text-align: end;
   margin-right: 1rem;
   font-size: 27px;
   font-weight: bold;
-
 }
 button {
-  box-shadow: 0px 3px 1px rgba(255, 255, 255, 0.133);
-  background-color: rgb(167, 88, 219);
+  background-color: rgba(171, 27, 207, 0.644);
   width: 100%;
   height: 100%;
   border-radius: 5px;
   border: none;
   font-size: 2rem;
   color: #eee;
+  cursor: pointer;
+}
+button:hover {
+  border: medium;
 }
 button:active {
-  transform: scale(90%);
-  background: transparent;
+  box-shadow: unset;
 }
-
 .gratefoul {
   text-align: center;
   font-size: 18px;
   color: #eee;
+  letter-spacing: 3px;
 }
 .gratefoul:active {
   color: red;
@@ -172,18 +174,22 @@ label {
 input {
   background-color: transparent;
   color: #eee;
+  border-radius: 5px;
+}
+input:focus {
+  outline: unset;
 }
 input::placeholder {
   color: rgb(224, 205, 205);
   text-align: center;
+  font-size: 1rem;
 }
-.teclado_numerico {
-  margin-top: 12px;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 14px 10px
-  ;
+
+#ingreso1,#ingreso2 {
+  border-bottom: 3px solid  rgb(255, 255, 255);
+  
 }
+
 #cero {
- grid-column: 1/ 4;
+  grid-column: 1/ 4;
 }

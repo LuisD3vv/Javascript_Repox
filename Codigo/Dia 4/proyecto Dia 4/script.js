@@ -68,7 +68,7 @@ function regresar(operacion) {
 
   ultimoResultado = resultado; // en cada operacion, el resultado se sobreescibre, siendo este valor al que las otras funciones acceden para aplicarles el redondeo
 
-  document.getElementById("resultado").innerHTML = "= " + resultado;
+  document.getElementById("resultado").innerHTML = "Ans = " + resultado;
   document.getElementById("resultado").style.color = "white";
 }
 // Funciones de redondeo del resultado (Tomando la variable global ultimoResultado )
