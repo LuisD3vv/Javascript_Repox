@@ -1,0 +1,47 @@
+/**
+ * Tipos de comparaciones booleanas en JavaScript:
+ *
+ * 1. Comparación de igualdad (==):
+ *    - Compara dos valores para verificar si son iguales después de realizar una conversión de tipo implícita.
+ *    - Ejemplo: `5 == '5'` devuelve `true` porque convierte el string '5' a número antes de comparar.
+ *
+ * 2. Comparación estricta de igualdad (===):
+ *    - Compara dos valores para verificar si son iguales sin realizar conversión de tipo.
+ *    - Ejemplo: `5 === '5'` devuelve `false` porque los tipos son diferentes (número vs string).
+ *
+ * 3. Comparación de desigualdad (!=):
+ *    - Compara dos valores para verificar si son diferentes después de realizar una conversión de tipo implícita.
+ *    - Ejemplo: `5 != '5'` devuelve `false` porque convierte el string '5' a número antes de comparar.
+ *
+ * 4. Comparación estricta de desigualdad (!==):
+ *    - Compara dos valores para verificar si son diferentes sin realizar conversión de tipo.
+ *    - Ejemplo: `5 !== '5'` devuelve `true` porque los tipos son diferentes.
+ *
+ * 5. Comparación mayor que (>):
+ *    - Verifica si el valor de la izquierda es mayor que el de la derecha.
+ *    - Ejemplo: `10 > 5` devuelve `true`.
+ *
+ * 6. Comparación mayor o igual que (>=):
+ *    - Verifica si el valor de la izquierda es mayor o igual que el de la derecha.
+ *    - Ejemplo: `10 >= 10` devuelve `true`.
+ *
+ * 7. Comparación menor que (<):
+ *    - Verifica si el valor de la izquierda es menor que el de la derecha.
+ *    - Ejemplo: `5 < 10` devuelve `true`.
+ *
+ * 8. Comparación menor o igual que (<=):
+ *    - Verifica si el valor de la izquierda es menor o igual que el de la derecha.
+ *    - Ejemplo: `5 <= 5` devuelve `true`.
+ *
+ * 9. Comparación lógica con AND (&&):
+ *    - Devuelve `true` si ambas expresiones son verdaderas.
+ *    - Ejemplo: `(5 > 3) && (10 > 5)` devuelve `true`.
+ *
+ * 10. Comparación lógica con OR (||):
+ *     - Devuelve `true` si al menos una de las expresiones es verdadera.
+ *     - Ejemplo: `(5 > 10) || (10 > 5)` devuelve `true`.
+ *
+ * 11. Negación lógica (!):
+ *     - Invierte el valor booleano de una expresión.
+ *     - Ejemplo: `!(5 > 10)` devuelve `true` porque `5 > 10` es `false`.
+ */

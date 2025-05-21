@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="img/cineIcon.png">
+    <!--Colocar etiquetas meta-->
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="cont_login">
+      <h1 class="title">Petitio</h1>
+      <div class="request">
+        <label for="edad">Ingresa tu edad para conocer nuestra recomendacion!</label>
+        <input
+          type="text"
+          name="edad"
+          id="edad"
+          placeholder="ingresa tu edad"
+          min="1"
+          max="99"
+        />
+      </div>
+      <div class="Seccion_categoria">
+        <h3 class="categoria_title">Selecciona la categoria de tu interes</h3>
+        <div class="categorias">
+          <section class="categoria_campo comedia" >
+            <h3>Comedia</h3>
+            <button type="submit" id="C_comedia"><a href="login.html">Enviar</a></button>
+          </section>
+
+          <section class="categoria_campo crimen">
+            <h3>Crimen</h3>
+            <button type="submit" id="C_comedia"><a href="login.html">Enviar</a></button>
+          </section>
+
+          <section class="categoria_campo drama">
+            <h3>Drama</h3>
+            <button type="submit" id="C_drama"><a href="login.html">Enviar</a></button>
+          </section>
+
+          <section class="categoria_campo romance">
+            <h3>Romance</h3>
+            <button type="submit" id="C_romance"><a href="login.html">Enviar</a></button>
+          </section>
+
+          <section class="categoria_campo accion">
+            <h3>Accion</h3>
+            <button type="submit" id="C_accion"><a href="login.html">Enviar</a></button>
+          </section>
+
+          <section class="categoria_campo ficcion">
+            <h3>Ficcion</h3>
+            <button type="submit" id="C_ficcion"><a href="login.html">Enviar</a></button>
+          </section>
+
+          <section class="categoria_campo heroes">
+            <h3>Soon</h3>
+            <button type="submit" id="C_comedia"><a href="login.html">Enviar</a></button>
+          </section>
+          <section class="categoria_campo Terror">
+            <h3>Soon</h3>
+            <button type="submit" id="C_comedia"><a href="login.html">Enviar</a></button>
+          </section>
+
+          <!-- <section class="categoria_campo Biopic">
+            <h3>Soon</h3>
+            <button id="C_Biopic">Enviar</button>
+          </section>  -->
+        </div>
+    </div>
+  </body>
+</html>
+
+<!--utilizar blank space para que se abra una nueva pesataña y
+muestre las portadas de als peliculas junto con una descripcion-->
