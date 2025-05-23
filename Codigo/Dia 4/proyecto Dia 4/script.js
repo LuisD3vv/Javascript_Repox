@@ -38,7 +38,7 @@ function randomice(numero1, numero2) {
       Math.random() *
         (Math.max(numero1, numero2) - Math.min(numero1, numero2) + 1) // utilizando min y max podemos hacer mas grande el rango de numeros
     ) + Math.min(numero1, numero2);
-  return numeroAletorio;
+  return numeroAletorio; 
 }
 // Creando la funcion cerebro
 function regresar(operacion) {
@@ -68,8 +68,15 @@ function regresar(operacion) {
 
   ultimoResultado = resultado; // en cada operacion, el resultado se sobreescibre, siendo este valor al que las otras funciones acceden para aplicarles el redondeo
 
-  document.getElementById("resultado").innerHTML = "Ans = " + resultado;
-  document.getElementById("resultado").style.color = "white";
+  if(toString(resultado).length > 18){
+     document.getElementById("resultado").textContent = "Ans = " + resultado;
+     document.getElementById("resultado").style.fontSize = "10px";
+     document.getElementById("resultado").style.color = "white";
+  }
+  else{
+    document.getElementById("resultado").innerHTML = "Ans = " + resultado;
+    document.getElementById("resultado").style.color = "white";
+  }
 }
 // Funciones de redondeo del resultado (Tomando la variable global ultimoResultado )
 function redondo(resultado) {

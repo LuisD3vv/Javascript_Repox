@@ -1,80 +1,66 @@
 :root {
   --FuentePrincipal: "Courier Prime", monospace;
 }
-
 * {
   margin: 0px;
   padding: 0px;
 }
+
 *,
 *::after,
 *::before {
   box-sizing: inherit;
 }
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
-
 body {
   background-color: #222;
   font-size: 2rem;
   font-family: var(--FuentePrincipal);
 }
-
 .cont_login {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-color: #fff6f612;
-  box-shadow: 0px 0px 3px 1px rgb(146, 146, 146);
-  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: auto;
-  max-width: 120rem;
-  height: auto;
+  max-width: 100rem;
   margin: 2rem auto;
+  gap: 5px;
+  border-left: 11px solid rgb(255, 255, 255);
+  border-right: 11px solid rgb(255, 255, 255);
 }
-@media (max-width: 40rem) {
-  .cont_login {
-    width: 95%;
-  }
 
-  .categoria_campo {
-    min-width: 30rem;
-  }
-}
 .title {
-  text-align: center;
-  color: #ffff;
-  letter-spacing: 10px;
-  padding: 5px;
-  box-shadow: 0px 0px 3px 1px black;
-  background: linear-gradient(to right, violet, rgb(190, 91, 91));
-  border: unset;
-  transition: ease-out 0.5s;
+  font-family: monospace;
+  text-align: left;
+  width: auto;
+  background-color: rgb(74, 74, 241);
+  align-content: center;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  font-style: italic;
+  color: white;
+  font-size: 3.5rem;
 }
-h1:hover {
-  transition: ease 0.5s;
-  letter-spacing: 30px;
+.title h1 {
+  margin-left: 2rem;
 }
 .request {
   display: flex;
+  align-content: center;
   flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  margin-top: 1rem;
-  background-color: rgb(240, 70, 70);
+  width: auto;
+  background-color: rgb(235, 86, 86);
 }
-
 label {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #ffffff;
-  margin-bottom: 1rem;
   text-align: center;
+  letter-spacing: 3px;
 }
-input {  margin-top: 2rem;
-  height: 40px;
+input {
+  height: 50px;
   width: 50%;
   outline: none;
   padding: 10px;
@@ -82,164 +68,200 @@ input {  margin-top: 2rem;
   border: unset;
   border-bottom: 3px solid rgb(219, 205, 205);
   text-align: center;
+  margin: 0 auto;
   color: white;
 }
 input:focus {
-  border-left: 3px solid rgb(6, 2, 255);
-  border-right: 3px solid rgb(25, 0, 255);
-  border-bottom: unset;
-  transform: scale(1.05);
+  border-left: 3px solid rgb(219, 205, 205);
+  border-right: 3px solid rgb(219, 205, 205);
   border-radius: 5px;
+  transform: scale(1.05);
 }
-
 input::placeholder {
   text-transform: capitalize;
   color: white;
 }
-
+.Seccion_categoria {
+  max-width: 100rem;
+  margin: auto;
+}
 .categorias {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-wrap: wrap;
   margin: 1rem auto;
   padding: 5px;
   height: auto;
-  gap: 10px;
+  gap: 15px 10px;
   text-align: center;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.452);
   padding: 10px;
   border-radius: 5px;
   justify-content: space-around;
 }
-section button {
+.seleccion {
+  display: flex;
+  justify-content: space-evenly;
+  max-height: 30px;
+  margin-bottom: 4rem;
+}
+button {
+  margin-top: 1rem;
   outline: none;
   border: none;
-  padding: 5px;
+  padding: 15px;
   cursor: pointer;
-  max-height: 30px;
   letter-spacing: 2px;
-  color: rgba(0, 0, 0, 0);
-  margin-top: 37rem;
-  border-radius: 5px;
-  transition: ease-out 0.5s;
-  width: 95%;
-  background: transparent;
-}
-button:hover {
-  transform: scale(1.05);
-  background-color: rgb(255, 255, 255);
+  text-transform: capitalize;
   color: rgb(0, 0, 0);
-  transition: ease 0.5s;
+  border-radius: 5px;
+  box-shadow: 3px 3px 1px 1px grey;
+  border: medium;
+  max-height: 40px;
 }
-button:active {
-  background-color: blue;
-}
+
 .categoria_title {
   margin-top: 3rem;
-  padding: 15px;
+  padding: 5px;
   color: #eee;
-  font-size: 25px;
-  letter-spacing: 3px;
-  border-radius: 10px;
+  font-size: 3rem;
+  letter-spacing: 5px;
+  width: 80%;
+  margin: auto;
+  border-bottom: 1px solid grey;
 }
 .categoria_campo {
   overflow: hidden;
   border: 1px solid black;
-  width: 28rem;
+  width: 23rem;
   min-height: 45rem;
   padding: 10px;
   color: transparent;
   text-shadow: 1px 1px 1px black;
   letter-spacing: 3px;
   transition: ease-out 0.5s;
+  background-image: url(img/HD-wallpaper-loading-dont-him-jokes-losing-love-note-password-screen-serious-status.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .categoria_campo:hover {
   overflow: hidden;
   transition: ease 0.5s;
   box-shadow: 0px 0px 13px 2px rgb(206, 204, 187);
-  transform: scale(1.1);
+  transform: scale(1.05);
   background-color: rgba(255, 255, 255, 0.589);
-  border-radius: 15px;
 }
-/*Categorias*/
-.comedia {
-  background-image: url(img/backgroundComedia.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-clip: border-box;
-  color: white;
-}
-.crimen {
-  background-image: url(img/backgroundCrimen.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-}
-.drama {
-  background-image: url(img/bakcgroundDrama.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-}
-.romance {
-  background-image: url(img/BackgroundRomance.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-}
-.accion {
-  background-image: url(img/backgroundAccion.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-}
-.ficcion {
-  background-image: url(img/BackgoundScifi.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: black;
-}
+
 h2 {
   text-align: center;
   letter-spacing: 3px;
 }
-a {
-  text-decoration: none;
-  color: white;
-  letter-spacing: 5px;
-}
-a:focus {
-  transform: scale(1.05);
-}
 h3 {
+  letter-spacing: 8px;
   text-align: center;
+  text-shadow: 0px 0px 10px #222;
 }
 /*Parte al enviar el contenido al servidor*/
-.title_2 {
-text-align: center;
-color:white;
-letter-spacing: 0px;
+.bg-title {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  box-shadow: 0px 0px 5px 1px black;
+  padding: 5px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid grey;
+}
+.title_2:hover {
+  color: rgb(255, 255, 255);
 }
 .contenedor {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin: auto;
-     width: 100rem;
-    gap: 10px;
-    padding: 10px;
-justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100rem;
+  width: auto;
+  margin: 1rem auto;
+  gap: 10px;
+  padding: 15px;
+  justify-content: space-between;
 }
 .campo {
-    width: 20rem;
-    height: 40rem;
-    background-color: rgba(203, 203, 235, 0.288);
+  flex-grow: 1;
+  padding: 15px;
+  flex-basis: 30rem;
+  height: auto;
+  box-shadow: 0px 0px 5px 1px black;
 }
 .campo:hover {
-    box-shadow: 0px 0px 5px 1px rgb(255, 255, 255);
-    transform: rotate3d(1, 1, 1, 5deg);}
+  box-shadow: 0px 0px 5px 1px rgb(255, 255, 255);
+  transform: scale(1.02);
+}
+.campo_imagen {
+  padding: 10px;
+  object-fit: contain;
+}
+.campo_descripcion {
+  margin-top: 1rem;
+  box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
+  width: 100%;
+  height: 26rem;
+  border-bottom-right-radius: 10px;
+}
+img {
+  width: 100%;
+  border-radius: 5px;
+  height: auto;
+  border: 3px dotted black;
+}
+
+@media (max-width: 50rem) {
+  .cont_login {
+    width: 95%;
+    grid-template-columns: 1fr;
+    padding: 5px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .categoria_campo {
+    height: 60rem;
+    flex-grow: 1;
+  }
+  .Seccion_categoria {
+    box-shadow: 0px 0px 4px 5px rgb(0, 0, 0);
+    width: 95%;
+  }
+
+  a {
+    color: #222;
+    font-weight: bold;
+  }
+  .categoria_campo:hover {
+    transform: unset;
+    background-color: rgba(255, 255, 255, 0.589);
+  }
+
+  input {
+    margin-top: 1rem;
+    width: 85%;
+  }
+  .request {
+    height: 10rem;
+  }
+  .seleccion {
+    flex-direction: column;
+    padding: 5px;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 28rem;
+    justify-self: baseline;
+ }
+  button {
+    background-color: lightblue;
+    width: 100%;
+    padding: 30px;
+    max-height: 20px;
+  }
+    button:hover {
+    transform: scale(1.05);
+    }
+}

@@ -184,12 +184,28 @@ input::placeholder {
   text-align: center;
   font-size: 1rem;
 }
-
 #ingreso1,#ingreso2 {
   border-bottom: 3px solid  rgb(255, 255, 255);
-  
 }
-
 #cero {
   grid-column: 1/ 4;
+}
+@media (max-width: 600px) {
+  #resultado {
+    font-size: 20px;
+  }
+  .contenedor {
+    width: 90%;
+  }
+  .inputs {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .operador1,
+  .operador2 {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 10px;
+  }
+  
 }
