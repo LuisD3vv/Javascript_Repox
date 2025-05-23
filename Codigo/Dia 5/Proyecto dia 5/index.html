@@ -15,11 +15,16 @@
     <title>Login</title>
   </head>
   <body>
+    <div class="contenedor_general">
     <div class="cont_login">
       <div class="title">
         <h1>Petitio</h1>
       </div>
-      <div class="request">
+    
+    </div>
+
+    <div class="Seccion_categoria">
+         <div class="request">
         <label for="edad">Ingresa tu edad</label>
         <input
           type="text"
@@ -30,10 +35,8 @@
           max="99"
         />
       </div>
-    </div>
-
-    <div class="Seccion_categoria">
       <h3 class="categoria_title">Selecciona la categoria de tu interes</h3>
+     
       <div class="seleccion">
         <div class="opcion">
           <button id="C_crimen">crimen</button>
@@ -48,20 +51,16 @@
           <button id="C_accion">accion</button>
         </div>
       </div>
+      <p id="REcom">--</p>
       <div class="categorias">
         <section class="categoria_campo"></section>
-
         <section class="categoria_campo"></section>
         <section class="categoria_campo"></section>
         <section class="categoria_campo"></section>
-
-        <section class="categoria_campo Terror"></section>
-
-        <!-- <section class="categoria_campo Biopic">
-            <h3>Soon</h3>
-            <button id="C_Biopic">Enviar</button>
-          </section>  -->
+          <section class="categoria_campo"></section>
+        <section class="categoria_campo"></section>
       </div>
+    </div>
     </div>
     <script src="main.js"></script>
   </body>

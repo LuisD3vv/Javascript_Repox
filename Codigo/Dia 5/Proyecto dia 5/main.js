@@ -1,63 +1,68 @@
-let edad = document.getElementById("edad");
-
 function cambiar(opcion) {
-  switch (opcion) { //Cada [i] es el indice del elemento que comparte la misma clase, junto con el modificador de eventos del propio javascript
+  let elementoEdad = document.getElementById("edad");
+      document.getElementById("REcom").textContent = "recomendaciones";
+
+  if (!elementoEdad.value) {
+    alert(" Porfavor, Ingresa tu edad.");
+    
+    return;
+  }
+
+  
+  switch (
+    opcion //Cada [i] es el indice del elemento que comparte la misma clase, junto con el modificador de eventos del propio javascript
+  ) {
     case "crimen":
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[0].style.backgroundImage = "url('img/vertical.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[1].style.backgroundImage = "url('img/vertical.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[2].style.backgroundImage = "url('img/vertical.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[3].style.backgroundImage = "url('img/vertical.jpg')";
+
+      let campo = document.getElementsByClassName("categoria_campo");
+      let imagenes1 = [
+        "url('img/vertical.jpg')",
+        "url('img/p01gylnm.jpg')",
+        "url('img/la-propuesta-secuela.jpg')",
+        "url('img/backgroundAccion.jpg')"
+      ];
+      for (let i = 0; i < campo.length; i++) {
+        campo[i].style.backgroundImage = imagenes1[i]; // por cada campo, modificamos su background iterando sobre el mismo
+      }      
       break;
     case "comedia":
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[0].style.backgroundImage = "url('img/p01gylnm.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[1].style.backgroundImage = "url('img/p01gylnm.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[2].style.backgroundImage = "url('img/p01gylnm.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[3].style.backgroundImage = "url('img/p01gylnm.jpg')";
-      break;
+      let campo2 = document.getElementsByClassName("categoria_campo");
+      let imagenes2 = [
+        "url('img/vertical.jpg')",
+        "url('img/p01gylnm.jpg')",
+        "url('img/la-propuesta-secuela.jpg')",
+        "url('img/backgroundAccion.jpg')"
+      ];
+      for (let i = 0; i < campo2.length; i++) {
+        campo2[i].style.backgroundImage = imagenes2[i];
+      }
 
+      break;
     case "romance":
-      document.getElementsByClassName("categoria_campo"
-      )[0].style.backgroundImage = "url('img/la-propuesta-secuela.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[1].style.backgroundImage = "url('img/la-propuesta-secuela.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[2].style.backgroundImage = "url('img/la-propuesta-secuela.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[3].style.backgroundImage = "url('img/la-propuesta-secuela.jpg')";
+      let campo3 = document.getElementsByClassName("categoria_campo");
+      let imagenes3 = [
+        "url('img/vertical.jpg')",
+        "url('img/p01gylnm.jpg')",
+        "url('img/la-propuesta-secuela.jpg')",
+        "url('img/backgroundAccion.jpg')"
+      ];
+      for (let i = 0; i < campo3.length; i++) {
+        campo3[i].style.backgroundImage = imagenes3[i];
+      }
+
       break;
 
     case "accion":
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[0].style.backgroundImage = "url('img/backgroundAccion.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[1].style.backgroundImage = "url('img/backgroundAccion.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[2].style.backgroundImage = "url('img/backgroundAccion.jpg')";
-      document.getElementsByClassName(
-        "categoria_campo"
-      )[3].style.backgroundImage = "url('img/backgroundAccion.jpg')";
+      let campo4 = document.getElementsByClassName("categoria_campo");
+      let imagenes4 = [
+        "url('accion/acccion2.jpg')",
+        "url('accion/accion1.webp')",
+        "url('accion/backgroundAccion.jpg')",
+        "url('accion/spider-man-2-15-an-os-1562828142.jpg')"
+      ];
+      for (let i = 0; i < campo4.length; i++) {
+        campo4[i].style.backgroundImage = imagenes4[i];
+      }
       break;
   }
 }
