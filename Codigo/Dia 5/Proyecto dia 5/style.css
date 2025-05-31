@@ -24,13 +24,15 @@ body {
   max-width: 100rem;
   margin: 2rem auto;
   gap: 5px;
-  border-left: 11px solid rgb(255, 255, 255);
+  border-left: 5px solid rgb(255, 255, 255);
+  border-right: 5px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 1px 3px #0e0a0a;
+  background-color: rgba(234, 224, 245, 0.131);
 }
 .title {
   font-family: monospace;
   text-align: center;
   width: auto;
-  background-color: rgb(74, 74, 241);
   align-content: center;
   letter-spacing: 7px;
   text-transform: uppercase;
@@ -53,10 +55,13 @@ label {
   font-size: 3rem;
   color: #ffffff;
   text-align: center;
-  letter-spacing: 3px;
   background-color: rgba(234, 224, 245, 0.131);
   padding: 15px;
+  border: medium;
   border-radius: 5px;
+  border-bottom: 3px solid white;
+  width: 90%;
+  margin: auto;
 }
 input {
   height: 50px;
@@ -84,53 +89,77 @@ input::placeholder {
 }
 .Seccion_categoria {
   max-width: 100rem;
+  min-width: auto;
   margin: auto;
 }
 .categorias {
-  width: auto;
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 2;
+  /* display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  overflow: scroll; */
+  width: 90%;
   margin: 1rem auto;
   padding: 5px;
   height: auto;
   gap: 15px 10px;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   justify-content: space-around;
   box-shadow: 0px 0px 1px 3px #0e0a0a;
 }
 .seleccion {
+  width: 90%;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   margin: 1rem auto;
   padding: 15px;
-  width: 95%;
+  justify-content: space-between;
   box-shadow: 0px 0px 1px 3px #0e0a0a;
   border-radius: 5px;
 }
+
 button {
+  width: auto;
+  min-width: 15rem;
   font-family: monospace;
   padding: 15px;
   cursor: pointer;
-  letter-spacing: 5px;
   text-transform: capitalize;
-  color: #dddddd;
+  color: #eee;
   border-radius: 5px;
-  border: 2px solid black;
   background: transparent;
   font-weight: bold;
-  max-height: 50px;
   font-size: 15px;
-  text-shadow: 0px 0px 5px black;
+  letter-spacing: 2px;
+  box-shadow: 0px 0px 1px 3px #0e0a0a;
+  transition: 0.5s;
+  border: none;
+}
+#reinciar {
+  background-color: rgba(20, 3, 3, 0);
+  border: 2px solid transparent;
+  letter-spacing: 0px;
+  color: #222;
+  transition: ease-out 0.3s;
+}
+#reinciar:hover {
+  color: #eee;
+  transition: ease 0.5s;
+  box-shadow: 0px 0px 3px 3px #eee;
+}
+#reinciar:active {
+  transform: scale(1.05);
 }
 button:hover {
-  transform: scale(1.05);
-  border: 2px solid white;
+  transform: scale(1.08);
+  transition: 0.5s;
 }
 button:focus {
   outline-color: #0e0a0a;
-  border: 2px solid black;
+  box-shadow: 0px 0px 3px 3px #eee;
 }
 .categoria_title {
   margin-top: 5rem;
@@ -155,7 +184,6 @@ button:focus {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 5px;
 }
 .categoria_campo:hover {
   overflow: hidden;
@@ -166,10 +194,8 @@ button:focus {
 }
 h2 {
   text-align: center;
-  letter-spacing: 3px;
 }
 h3 {
-  letter-spacing: 8px;
   text-align: center;
   text-shadow: 0px 0px 10px #222;
 }
@@ -224,6 +250,7 @@ img {
   height: auto;
   border: 3px dotted black;
 }
+/* media queries */
 @media (min-width: 360px) and (max-width: 40rem) {
   .cont_login {
     width: 90%;
@@ -239,31 +266,31 @@ img {
     font-size: 35px;
   }
   .categoria_campo {
+    width: 100%;
     height: 60rem;
-    flex-grow: 1;
   }
   .Seccion_categoria {
-    width: 95%;
+    width: auto;
   }
   a {
     color: #222;
     font-weight: bold;
   }
 
-a:last-of-type {
-  border-right: 1px solid white;
-}
+  a:last-of-type {
+    border-right: 1px solid white;
+  }
   .categoria_campo:hover {
     transform: unset;
     background-color: rgba(255, 255, 255, 0.589);
   }
   label {
     margin-top: 1rem;
-    font-size: 30px;
+    font-size: 20px;
   }
   input {
     box-shadow: 0px 0px 3px 1px black;
-    margin-top: 1rem;
+    margin-top: 4rem;
     width: 95%;
     min-height: 10rem;
     border-radius: 5px;
@@ -279,22 +306,16 @@ a:last-of-type {
   }
   .seleccion {
     flex-direction: column;
-    padding: 5px;
-    width: 95%;
+    padding: 15px;
     gap: 2rem;
-    margin: auto;
-    margin-bottom: 5rem;
-    max-height: fit-content;
-      box-shadow: unset;
-
   }
   button {
     width: 100%;
-    max-width: unset;
+    height: 6rem;
   }
+
   button:hover {
     transform: scale(1.05);
-    transition: ease-in 1s;
   }
   .categoria_title {
     padding: 5px;
@@ -303,13 +324,13 @@ a:last-of-type {
     width: 95%;
     box-sizing: unset;
   }
-
   .footer {
     flex-direction: column;
     gap: 5px;
     width: 90%;
   }
   a {
+    align-content: center;
     background-color: rgba(234, 224, 245, 0.131);
     text-align: center;
     min-width: 95%;
@@ -317,12 +338,9 @@ a:last-of-type {
     margin: auto;
     color: white;
     padding: 5px;
-  }
-  .grateful {
-    text-align: center;
+    border-right: 1px solid rgba(234, 224, 245, 0.131);
   }
   .footer p {
-    color: rgb(84, 193, 34);
     text-align: center;
     min-width: 30rem;
     margin: auto;
@@ -333,11 +351,15 @@ a:last-of-type {
   .contenedor_general {
     min-width: 95%;
   }
+  .categorias {
+    display: flex;
+    flex-direction: column;
+  }
 }
 /* } fin mq */
 .contenedor_general {
   width: auto;
-  max-width: 70%;
+  max-width: 90%;
   margin: 1rem auto;
   padding: 5px;
   border-radius: 10px;
@@ -350,36 +372,39 @@ a:last-of-type {
   font-size: 30px;
 }
 .footer {
+  margin-top: 3rem;
   display: flex;
   width: 100%;
-  padding: 15px;
   justify-content: space-around;
+  text-align: center;
+  padding: 10px;
 }
 .footer p {
+  align-self: center;
+  flex: 2;
   color: rgb(255, 255, 255);
-  text-align: center;
-  width: 50%;
   font-size: 2rem;
 }
 a {
   color: white;
   text-decoration: none;
-  padding: 5px;
+  padding: 15px;
   border-right: 1px solid white;
-  width: 25%;
-  text-align: center;
   margin: auto;
+  flex: 1;
 }
 a:hover {
-  color: rgb(0, 0, 0);
-  background-color: #eee;
+  border: 0px;
+  color: rgb(255, 255, 255);
+  background-color: #eeeeee33;
   border-radius: 5px;
+  transition: ease 0.5s;
+  width: 2rem;
 }
 a:focus {
   border: 1px solid green;
   border-radius: 5px;
 }
-
 a:last-of-type {
   border-right: none;
 }
