@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop for 2</title>
+    <link rel="shortcut icon" href="4812525.png">
+    <style>
+      button {
+        background-color: red;
+        color: #eee;
+        border-radius: 5px;
+        position: relative;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 20px;
+        font-size: 14px;
+        font-family: monospace;
+        padding: 10px;
+
+      }
+      input {
+        border: unset;
+outline: none;
+        border-left: 3px solid blue;
+        border-bottom: 3px solid blue;
+padding: 10px;
+        border-radius: 5px;
+        color: green;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tabla de multiplicar</h1>
+    <ul id="listaTabla">
+  
+    </ul>
+    <label for="">Numero a multiplicar:</label><br />
+    <input id="textoTabla" placeholder="Ingresa un numero" value="0" />
+    <button onclick="calcular()">Multiplicar</button>
+    <script>
+      let elementoUser = document.getElementById("n");
+
+      function calcular() {
+        for (i = 0; i < elementoUser.value; i++);
+        document.write("<p>" + "n * i" + elementoUser.value * i + "</p>");
+      }
+    </script>
+  </body>
+</html>
