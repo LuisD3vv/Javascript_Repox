@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Venta de donuts</title>
+    <style>
+        body {
+            background: #222;
+        }
+        .title {
+            color: red;
+            font-size: 20px;
+            font-family: monospace;
+        }
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p class="title">venta de Madonas</p>
+
+    <p>
+        <label for="ventasTienda1">Tienda 1</label>
+        <input type="number" name="ventas1" id="ventasTienda1" min="0">
+    </p>
+
+        <p>
+        <label for="ventasTienda2">Tienda 2</label>
+        <input type="number" name="ventas2" id="ventasTienda2" min="0">
+    </p>
+        <p>
+        <label for="ventasTienda3">Tienda 3</label>
+        <input type="number" name="ventas3" id="ventasTienda3" min="0">
+    </p>    <p>
+        <label for="ventasTienda4">Tienda 4</label>
+        <input type="number" name="ventas4" id="ventasTienda4" min="0">
+    </p>    <p>
+        <label for="ventasTienda5">Tienda 5</label>
+        <input type="number" name="ventas5" id="ventasTienda5" min="0">
+    </p>    <p>
+        <label for="ventasTienda6">Tienda 6</label>
+        <input type="number" name="ventas6" id="ventasTienda6" min="0">
+    </p>
+
+    <p id="parrafoSalida"></p>
+
+    <p>
+    <button onclick="calcular()">calcular</button>
+    </p>
+</body>
+</html>

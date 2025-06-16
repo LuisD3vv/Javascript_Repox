@@ -7,4 +7,4 @@ function CalcularLitros() {
 
     var resultado = document.getElementById("textoResultado");
     resultado.textContent = "Carga " + Math.ceil(canLitros) + " Litros de Gasofa";
-}// con ceil redondearemos hacia arriba siemore
+}// con ceil redondearemos hacia arriba.

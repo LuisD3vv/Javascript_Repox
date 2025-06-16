@@ -38,7 +38,7 @@
             let fecha = new Date();// conseguir el objeto date, con fechas y horas
             let hora = String(fecha.getHours()).padStart(2,"0"); // convertir en string los elementos, 
             // luego se accede a su funcion llamada padstart, que, como dicen sus argumentos, si no hay dos elementos, rellena con un cero si faltan ambos,
-            //  o uno si solo falta uno ejemplo = 14:12:1, en ese elemento el 1, se rellenaria con un cero o con cualquier caracter elegido, tambien funcionaria en el caso de las horas y minutos 
+            //  o uno si solo falta uno ejemplo = 14:12:1, en ese elemento el 1, se rellenaria con un cero (01) o con cualquier caracter elegido, tambien funcionaria en el caso de las horas y minutos 
             
             let minutos = String(fecha.getMinutes()).padStart(2, "0");
             let segundo =String(fecha.getSeconds()).padStart(2, "0");

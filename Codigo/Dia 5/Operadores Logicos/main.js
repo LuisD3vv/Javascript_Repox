@@ -38,7 +38,7 @@ function calcular() {
    let puedebeber = edad >= 18;
    respuesta_1.textContent = puedebeber;
 
-   let puedeIngresar = edad >= 18 &&  edad <= 30;
+   let puedeIngresar = edad >= 18 && edad <= 30;
    respuesta_2.textContent = puedeIngresar;
    
    let Entradagratis = edad == 20 || edad ==  25 ;

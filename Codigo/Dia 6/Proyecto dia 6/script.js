@@ -1,12 +1,12 @@
-let notas = [9.5, 4.5, 7, 8.7, 6];
+let notas = [9.5, 4.5, 7, 8.7, 6]; //arreglo de numeros
 let nombre = prompt("Cual es tu nombre?", "Nombre");
 document.getElementById("user").innerHTML = nombre;
 
 function mostrarNotas() {
   let elementoLista = document.getElementById("Lista");
-  for (elemento of notas) {
+  for (elemento of notas) { // por cada elemento de notas
     
-    let itemI = document.createElement("li");
+    let itemI = document.createElement("li"); // Crea un elemento html
     if(elemento >= 5) {
         itemI.style.color= " #32ff00 "
     }
@@ -14,8 +14,8 @@ function mostrarNotas() {
                 itemI.style.color= "red"
 
     }
-    itemI.innerText = elemento;
-    elementoLista.appendChild(itemI);
+    itemI.innerText = elemento; // el texto que contendra cada item
+    elementoLista.appendChild(itemI); // Agregarle un hijo, a el objeto hmlt, en este caso un elemento li a una UL
   }
 }
 function Promedio() {

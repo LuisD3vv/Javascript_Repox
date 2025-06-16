@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Automatización 3</title>
+        <script src="script.js" defer=""></script>
+    </head>
+    <body>
+        <div id="contenido">
+            
+        </div>
+        <script>
+          function generarContenido(numero) {
+            let content = document.getElementById("contenido");
+            let label = document.createElement("label");
+            label.setAttribute("for", "txtInput" + numero);
+            label.innerText = "Label";
+    
+              
+              let input = document.createElement("input");
+              input.setAttribute("id", "txtInput" + numero);
+              input.setAttribute("type", "number");
+              input.setAttribute("value", 0);
+              
+              content.appendChild(label);
+              content.appendChild(input);
+              
+    return content;
+}
+
+</script>
+    </body>
+</html>

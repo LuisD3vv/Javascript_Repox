@@ -60,7 +60,7 @@ function fincuest() {
   }
 
   //Pausar el tiempo si el boton es presionado (si las repuestas fueron introducidas)
-  if (repuesta1 || repuesta2 || repuesta3 || repuesta4 || repuesta5 != null) {
+  if (repuesta1 && repuesta2 && repuesta3 && repuesta4 && repuesta5 != null) {
     alert("Cuenta regresiva pausada");
     clearInterval(regresiva); // detener conteo cuando se contesten todas
     return;

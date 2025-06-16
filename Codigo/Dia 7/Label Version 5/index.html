@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Venta de donuts V5</title>
+    <style>
+        body {
+            background: #222;
+        }
+        .title {
+            color: red;
+            font-size: 20px;
+            font-family: monospace;
+        }
+        p{
+            color: white;
+        }
+        button {
+            padding: 5px;
+            border: none;
+            width: 5rem;
+            font-size: 15px;
+            font-weight: bold;
+            width: 10rem;
+            font-family: monospace;
+            text-transform: capitalize;
+        }
+        #parrafoSalida {
+            box-shadow: 0px 0px 3px 1px black;
+            max-width: 15.5rem;
+            width: auto;
+            min-height: 7rem;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body onload="crearTiendas('itemsTiendas', 0,6)">
+    <p class="title"> &#127849 venta de Madonas</p>
+    <div id="itemsTiendas">
+    </div>
+    <p id="parrafoSalida"></p>
+    <p>
+    <button onclick="calcular()">calcular</button>
+    </p>
+</body>
+</html>
