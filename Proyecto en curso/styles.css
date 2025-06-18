@@ -27,27 +27,29 @@ body {
 }
 .Cont_title {
   font-size: 30px;
-    margin-left: 20px;
-
+  margin-left: 20px;
 }
 .nav-bg {
   align-items: center;
-  background-color: lightgray;
-  padding: 5px;
   display: flex;
-  width: 100%;
+  max-width: 129rem;
   justify-content: space-between;
   gap: 5rem;
-  
+  margin: 1rem auto;
+  border-left: 3px solid rgb(0, 0, 0);
+  padding: 5px;
+  border-right: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
 }
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(162, 158, 158, 0.51);
   padding: 5px;
-  margin-right: 10px;
+  width: auto;
+  gap: 10px;
 }
 a {
+  background-color: rgba(162, 158, 158, 0.51);
   font-family: monospace;
   text-align: center;
   text-decoration: none;
@@ -56,38 +58,28 @@ a {
   min-width: 22rem;
   font-weight: bold;
   letter-spacing: 3px;
-      font-size: 15px;
-
+  font-size: 15px;
 }
 a:hover {
   background-color: black;
   color: #eee;
-  transition: background-color ease-in-out .5s;
+  transition: background-color ease-in-out 0.5s;
   border-radius: 5px;
-}
-a:nth-child(1) {
-  border-right: 1px solid grey;
-}
-a:nth-child(3) {
-  border-left: 1px solid grey;
 }
 .contenedor {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  box-shadow: 6px 8px 1px 1px rgb(209, 195, 195);
+  grid-template-columns: 20% 80%;
   width: auto;
-  max-width: 100rem;
-  min-height: 65rem;
-  margin: 4rem auto;
+  max-width: 130rem;
+  min-height: 70rem;
+  margin: 3rem auto;
 }
 @media (max-width: 40rem) {
   .contenedor {
     margin: 2rem auto;
     width: 95%;
     grid-template-columns: 1fr;
-      box-shadow: unset;
-      border-radius: 5px;
-
+    box-shadow: unset;
   }
   .nav-bg {
     flex-direction: column;
@@ -97,9 +89,9 @@ a:nth-child(3) {
   nav {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
+    margin: auto;
     gap: 5px;
-
   }
   a {
     width: 100%;
@@ -119,10 +111,12 @@ a:nth-child(3) {
   }
 }
 .contenedor__notas--general {
+  border-top-left-radius: 3rem;
   background-color: lightcoral;
 }
 .contenedor_notas--ver {
   background-color: lightblue;
+  height: auto;
 }
 footer {
   top: 70px;
@@ -137,14 +131,166 @@ footer {
 #Author:hover {
   background-color: unset;
   color: green;
-
+}
+.contenedor__notas--general--create {
+  box-shadow: 0px 3px 1px 2px rgb(0, 0, 0);
+  font-family: monospace;
+  text-align: center;
+  font-size: 20px;
+  margin: 2rem auto;
+  border-radius: 5px;
+  padding: 10px;
+  width: 90%;
+  border-radius: unset;
+}
+.contenedor_creador {
+  width: 95%;
+  height: 33rem;
+  border-radius: 5px;
+  margin: auto;
+  box-shadow: 0px 1px 3px 2px rgb(0, 0, 0);
+}
+.contenedor_creador_extras {
+  width: 95%;
+  min-height: 35rem;
+  border-radius: 5px;
+  margin: 1rem auto;
+  box-shadow: 0px 1px 3px 2px rgb(0, 0, 0);
+}
+.header_ver-notas {
+  display: flex;
+  width: 95%;
+  margin: 1rem auto 2rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 1px 3px 1px rgb(0, 0, 0);
+  height: 55px;
+  padding: 5px;
+}
+.contenedor_notas--titulo {
+  font-family: monospace;
+  text-align: center;
+  font-size: 30px;
+  margin: 3rem auto;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+select {
+  align-items: center;
+  text-align: center;
+  width: 15rem;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  height: auto;
+}
+#EnviarOrden {
+  margin-left: 2rem;
+  border-radius: 5px;
+  padding: 10px;
+  width: 10rem;
+  height: auto;
+  margin-right: 1rem;
+  font-size: 16px;
+}
+.contenedor_real {
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 95%;
+  box-shadow: 0px 1px 3px 1px rgb(0, 0, 0);
+  border-radius: 5px;
+  margin: -1rem auto;
+  justify-items: center;
+  padding: 15px;
+  min-height: 70rem;
+  max-height: 63rem;
+}
+.nota {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 1px 3px 1px rgb(0, 0, 0);
+  margin-top: 1rem;
+  width: 22rem;
+  height: 36rem;
+  border-bottom-right-radius: 10px;
+  padding: 5px;
+}
+.nota:hover {
+  transform: scale(1.05);
+  transition: transform ease 0.5s;
+}
+.titulo_nota {
+  box-shadow: 0px 1px 3px 1px rgb(0, 0, 0);
+  width: 90%;
+  height: 5rem;
+  margin: 6px auto;
+  text-align: center;
+  font-size: 15px;
+}
+.contenido_nota {
+  text-align: center;
+  box-shadow: 0px 1px 3px 1px rgb(0, 0, 0);
+  width: 2rem;
+  min-height: 22rem;
+  margin: auto;
+  width: 90%;
+  overflow: hidden;
+}
+.opciones_notas {
+  box-shadow: 0px 1px 3px 1px rgb(0, 0, 0);
+  width: 2rem;
+  height: 3rem;
+  margin: auto;
+  width: 95%;
+  display: flex;
+}
+.notas_opcion {
+  background-color: red;
+  text-align: center;
+  text-decoration: none;
+  color: #222;
+  padding: 10px;
+  letter-spacing: 3px;
+  font-size: 7px;
+  width: 100%;
+}
+.contenedor_creador {
+  display: flex;
+  align-content: center;
+}
+nav {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-left: 4rem;
+}
+.enviar_notas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  box-shadow: 0px 1px 3px 1px rgb(223, 223, 223);
+  width: 90%;
+  margin: 1rem auto;
 }
 
-h3 {
-    text-align: center;
-    font-size: 20px;
-    box-shadow: 0px 4px 1px 1px #222;
-    width: 50%;
-    margin: 3rem auto ;
-    border-radius: 5px;
+label {
+  font-size: 15px;
+}
+input {
+  padding: 5px;
+  width: 100%;
+}
+p {
+  font-size: 15px;
+}
+textarea {
+  min-height: 10rem;
+  width: 100%;
+}
+#Crear_nota {
+  padding: 5px;
+  width: 100%;
 }

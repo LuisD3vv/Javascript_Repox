@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notas</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="Author" content="Lissandro Dev">
+    <meta name="description" content="Pagina de notas a mi gusto" />
+    <meta name="keywords" content="notas super anotaciones notas keypad keep" />
+    <meta name="Author" content="Lissandro Dev" />
     <!-- <meta http-equiv="refresh" content="0; ">
     <meta http-equiv="refresh" content="5"> -->
     <link rel="stylesheet" href="styles.css" />
@@ -23,16 +23,67 @@
     <div class="contenedor">
       <div class="contenedor__notas--general">
         <h3 class="contenedor__notas--general--create">Crear notas</h3>
-        
+        <section class="contenedor_creador">
+          <div class="enviar_notas">
+            <p>
+              <label for="titulo">Titulo de la nota</label>
+              <input type="text" name="" id="titulo" />
+            </p>
+            <p>Contenido</p>
+            <textarea
+              name="titulo"
+              id="titulo"
+              placeholder="escribe aqui"
+            ></textarea>
+            <br />
+
+            <button id="Crear_nota">Crear</button>
+          </div>
+        </section>
+        <section class="contenedor_creador_extras"></section>
       </div>
+      <!--Seccion ver notas-->
       <div class="contenedor_notas--ver">
-          <h3 class="contenedor_notas--ver--ver">ver notas</h3>
+        <div class="header_ver-notas">
+          <section>
+            <h3 class="contenedor_notas--titulo">Notas</h3>
+          </section>
+          <section class="cont_not">
+            <select title="notas" name="OrderNotes" id="">
+              <option value="Ordenar" selected>--Ordenar--</option>
+              <option value="Fecha" id="op-fecha">Fecha</option>
+              <option value="Tamaño" id="op-tamanio">Tamaño</option>
+              <option value="alfa" id="op-afla">A-Z</option>
+            </select>
+            <button id="EnviarOrden">Ordenar</button>
+          </section>
+        </div>
+        <div class="contenedor_real">
+          <section class="nota">
+            <div class="titulo_nota">
+              <h2>Luis</h2>
+            </div>
+            <div class="contenido_nota">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                voluptates non deleniti sit in enim rerum ab totam, rem sed
+                porro! Eaque, dignissimos. Corrupti vitae tempora unde hic, nam
+                alias.
+              </p>
+            </div>
+            <div class="opciones_notas">
+              <a class="notas_opcion" href="#">Editar</a>
+              <a class="notas_opcion" href="#">Borrar</a>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
     <footer>
-       <a id="Author" href="https://github.com/LuisD3vv">&copy 2025 Lissandro dev</a> 
+      <a id="Author" href="https://github.com/LuisD3vv"
+        >&copy 2025 Lissandro dev</a
+      >
     </footer>
   </body>
-
 </html>
