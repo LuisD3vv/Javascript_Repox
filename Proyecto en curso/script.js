@@ -1,10 +1,14 @@
 let fecha = new Date();
 
-// Crear funcion para crear los elementos
-function CrearElementos() {
+let nombre = prompt("Hola, ¿Cual es tu nombre?");
+let user_name = document.getElementById("user_name");
+user_name.textContent = "De " +  nombre;
 
+function CrearElementos(contenedor) {
+  // Crear los elementos traidos del html
+  let elementoContenedor = document.getElementById("contenedor_real");
 }
-// Añadir elementos al html
-function anadirElementos(){
 
+function CrearNotas(){
+  
 }
