@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tomate</title>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Tomate</h1>
+      <div class="contenedor_opciones">
+        <a href="#">yo</a>
+        <a href="#">Preferencias</a>
+        <a href="#">Perfil</a>
+      </div>
+    </div>
+    <div id="contenedor_gen">
+      <div class="backgroud">
+        <section class="temporizador">
+            <label for="tempo_object">Establecer tiempo</label>
+            <input id="tempo_object" placeholder="cantidad de tiempo"></input>
+        </section>
+        <section class="tempo">
+          <p id="time">00:00</p>
+          <div class="centrar_botton">
+            <button id="Iniciar_tempo" onclick="restar_tiempo()" type="submit">Start</button>
+          </div>
+        </section>
+      </div>
+      <div class="cont_task">
+        <div class="cont_add">
+          <p class="task_text">Tasks</p>
+          <div class="bg_btonCrear">
+            <button id="AddTask" onclick="crear_tarea()" type="submit">+</button>
+          </div>
+        </div>
+        <div id="tareas"></div>
+        <section class="task_option" onclick="toggleCard(this)">
+            <div class="titulo">
+                <h3>Presiona aqui para conocer mas</h3>
+            </div>
+            <div class="contenido_carta">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At facilis nihil assumenda iste asperiores neque consectetur voluptate aliquam sapiente, placeat laudantium deleniti nemo quis debitis animi accusamus provident temporibus! Ut.</p>
+            </div>
+        </section>
+<!--Aqui van las notas-->
+      </div>
+    </div>
+        <script src="script.js"></script>
+
+  </body>
+</html>

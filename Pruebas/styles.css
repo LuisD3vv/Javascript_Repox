@@ -1,0 +1,193 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+*,
+*::after,
+::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  background-color: rgb(223, 80, 80);
+}
+
+#contenedor_gen {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 50rem;
+  height: 80rem;
+  margin: 3rem auto;
+}
+.temporizador {
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+label {
+  text-align: center;
+  font-size: 15px;
+  color: rgb(248, 238, 238);
+  margin-bottom: 1rem;
+}
+#tempo_object {
+  color: #eee;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  margin: auto;
+  text-align: center;
+  border-bottom: 3px solid grey;
+}
+#tempo_object:hover {
+  border-radius: 5px;
+  cursor: pointer;
+}
+#tempo_object:focus {
+  background-color: rgba(0, 0, 0, 0.239);
+  outline: none;
+}
+.backgroud {
+  border-radius: 5px;
+  background-color: rgba(210, 128, 128, 0.478);
+  height: 32rem;
+}
+#Iniciar_tempo {
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgb(166, 75, 75);
+  height: 50px;
+  box-shadow: 0px 3px 1px 1px rgb(170, 158, 158);
+  border: medium;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+#Iniciar_tempo:active {
+  margin-top: 3px;
+  box-shadow: unset;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 60rem;
+  margin: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.372);
+}
+a {
+  text-align: center;
+  width: 9rem;
+  background-color: rgba(240, 248, 255, 0.182);
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  font-weight: 100;
+  border-radius: 5px;
+  text-decoration: none;
+  flex: 1 1 100px;
+  flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor_opciones {
+  padding: 10px;
+  gap: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+h1 {
+  align-self: center;
+  color: rgb(241, 228, 228);
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+#time {
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+.centrar_botton {
+  width: 20rem;
+  margin: 3rem auto;
+}
+.cont_task {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 2rem;
+
+  width: 100%;
+}
+.cont_add {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  text-align: start;
+  color: white;
+  font-size: 20px;
+  border-bottom: 2px solid white;
+  height: 30px;
+  padding-bottom: 3.5rem;
+  margin-bottom: 1rem;
+  gap: 5px;
+}
+#AddTask {
+  background-color: white;
+  font-size: 20px;
+  width: 3rem;
+  border-radius: 5px;
+}
+#tareas {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.task_option {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: rgb(91, 87, 87);
+  font-size: 15px;
+  border-radius: 5px;
+  border-left: 5px solid black;
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  transition: all 0.3s ease;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  overflow: hidden;
+}
+.titulo {
+  padding: 1rem;
+}
+.contenido_carta {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: transparent;
+}
+.task_option.expanded .contenido_carta {
+  background-color: rgba(255, 255, 255, 0.439);
+  color: black;
+  max-height: 300px;
+}
+.task_option:hover {
+  transform: scale(1.01);
+  transition: transform ease 0.3s;
+}
