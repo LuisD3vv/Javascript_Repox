@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <script>
+        // Constructor que define instancias y funciones
+        function Perro(){
+            this.patas = 4;
+            this.ladrar = function(){
+                console.log("Guau");
+            };
+        }
+        // Nuevo objeto con new
+        let simba = new Perro();
+        let Rocko = new Perro();
+        let Hachiko = new Perro();
+
+        // Otro ejemplo
+        let Automovil = function(){
+        this.marca = "Ford",
+        this.modelo = "Fiesta",
+        this.anio = 2015,
+        this.arrancar = function(){
+            console.log("En marcha");
+        }
+        };
+    </script>
+</body>
+</html>

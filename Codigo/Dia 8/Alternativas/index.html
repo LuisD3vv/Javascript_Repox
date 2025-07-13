@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternativas para crear objetos</title>
+</head>
+<body>
+    <script>
+        let coche1 = new Object();
+        coche1.nombre = "Chevrolet";
+        coche1['Modelo'] = 'Prisma';
+        coche1.encender = function(){
+            alert("Coche encendido a la verga");
+        };
+        // objeto creado con propiedad al momento
+        let perro1 = new Object({nombre: 'Simba'});
+
+        // crear objetos identicos al pasado por parametro
+        let coche2 = Object.create(coche1);
+    </script>
+</body>
+</html>

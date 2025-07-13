@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo This</title>
+    <style>
+        .contenedor{
+            width: 30rem;
+            height: 30rem;
+            margin: auto;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <p>El metodo <strong>this.object</strong> nos ayuda a trabajar con cada objeto creado inependientemente del nombre de este
+        nos facilita el uso de multiples objetos y referirnos a ellos
+    </p>
+    <div class="contenedor">
+        <img src="code.png" alt="">
+        <figcaption>Aqui podemos ver el ejemplo, 
+            el This se refiere a cada instancia 
+            propia del objeto en cuestion donde se use,
+        en el caso de que se creara otro objeto llamado gato
+    pero fuera una clase este metodo llamado ladrar podria ser
+una incidencia de polimorfismo</figcaption>
+    </div>
+    <script>
+        let perro = {
+            nombre: "Rocko",
+            raza: "Mezcla",
+            edad: 5,
+            ladrar(){
+                console.log("Guau");
+            },
+            saludar(){
+                console.log("Hola me llamo " + this.nombre);
+            }
+        }
+
+        let perro2 = {
+            nombre: "Chikis",
+            raza: "Mezcla",
+            edad: 10,
+            ladrar(){
+                console.log("Guau");
+            },
+            saludar(){
+                console.log("Hola me llamo " + this.nombre);
+            }
+        }
+    </script>
+</body>
+</html>

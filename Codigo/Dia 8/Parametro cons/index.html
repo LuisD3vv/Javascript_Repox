@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Perro(raza,edad) {
+            this.patas = 4,
+            this.raza = raza,
+            this.edad = edad,
+            //Metodo
+            this.ladrar = function(){
+                console.log("Guau");
+            };
+        };
+
+        let Rocko = new Perro("coca", 5);
+        let Nala = new Perro("coca", 5);
+        let Lana = new Perro("coca", 5);
+
+        function Empleado(nombre, apellido,edad,cargo){
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.edad = edad;
+            this.cargo = cargo;
+            this.Presentarse = function(){
+                // Este es como un tipo de formateo de texto similar al de python a la verga joton
+                console.log(`Mi nombre es ${this.nombre} ${this.apellido}, soy ${this.cargo}, y tengo ${this.edad}`);
+            };
+        };
+    </script>
+</body>
+</html>

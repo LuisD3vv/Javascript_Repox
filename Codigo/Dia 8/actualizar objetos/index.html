@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <script>
+        //Declaracion de un objeto
+        let perro = {
+            nombre: "Simba",
+            raza: "Shi Tzu",
+            edad: 4,
+            //Metodo
+            ladrar(){
+                console.log("Guau");
+            }
+        };
+        // modificar el valor real
+        function cumplirAnios(){
+            perro.edad = perro.edad + 1;
+        }
+        perro["ColorOjos"] = 'marron';
+        console.log(perro.raza)
+    </script>
+</body>
+</html>
