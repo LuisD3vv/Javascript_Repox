@@ -1,0 +1,29 @@
+td,
+th {
+    padding: 6px;
+    padding-bottom: 9px;
+    font-family: sans-serif;
+    border: none;
+    border-bottom: 1px solid #0004;
+    text-align: center;
+}
+
+td:hover {
+    background-color: #66666691;
+    color: white;
+    border-radius: 5px;
+    height: 100%;
+}
+table {
+    width: 100%;
+    box-shadow: 0px 0px 25px #0002;
+    border-spacing: 12px;
+    margin: auto;
+    border-radius: 5px;
+}
+.th_header,
+.td_contenido {
+    border: none;
+    padding: 12px;
+    font-size: 1.2em;
+}

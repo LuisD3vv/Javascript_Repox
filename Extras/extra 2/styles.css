@@ -1,0 +1,29 @@
+body {
+  background-color: #333;
+  color: #ddd;
+  border-bottom: none;
+}
+details {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  font-size: 1.7em;
+}
+/*Editar cuando este abierto el elemento*/
+details[open] {
+  border: 1px solid #ddd;
+  font-weight: bold;
+}
+summary {
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: transparent;
+  padding: 9px;
+  font-size: 1em;
+}
+.checkbox {
+    width: 50%;
+}
+a {
+    color: #69f;
+    text-decoration: none;
+}

@@ -26,37 +26,65 @@
     <meta name="OG:URL" content="url original" />
     <link rel="icon" type="image/png" />
     <!--Icono favicon preferiblemente de 32x32 o 64x64px-->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="fielset.css" />
     <title>Imagenes</title>
   </head>
   <body>
     <form>
       <h2>Formulario de contacto</h2>
-
+      <fieldset>
+        <legend>INFORMACION BASICA</legend>
+        <div class="form_input">
+          <label for="">Nombre completo</label>
+          <input type="text" placeholder="Nombre completo" />
+        </div>
+        <div class="form_input">
+          <label for="">Email</label>
+          <input type="email" placeholder="Email" />
+        </div>
+        <div class="form_input">
+          <label for="">Asunto</label>
+          <input type="email" placeholder="Asunto" />
+        </div>
+      </fieldset>
+      <!--DATALIST & SELECT-->
       <div class="form_input">
-        <input type="text" placeholder="Nombre completo" />
+        <label for=""
+          >Tipo de usuario
+          <select name="type-of-user">
+            <option value="user1">Seguidor/a</option>
+            <option value="user2">Empresa</option>
+            <option value="user3">Otro</option>
+          </select>
+        </label>
       </div>
+      <!--DATA LIST Y OPTION-->
       <div class="form_input">
-        <input type="email" placeholder="Email" />
+        <label
+          >Referente
+          <input list="referente" name="referente" />
+          <datalist id="referente" name="referente">
+            <option>Seguidor/a</option>
+            <option>Una Empresa</option>
+            <option>Un amigo</option>
+            <option>Lo vi en redes</option>
+          </datalist>
+        </label>
       </div>
+      <!--TEXT AREA-->
       <div class="form_input">
+        <label>Mensaje</label>
         <textarea
           name=""
           id=""
           placeholder="Deja tu mensaje"
           maxlength="140"
         ></textarea>
-        <img
-          width="200"
-          style="margin-top: 1rem"
-          src="gato1.jpg"
-          alt=""
-        />
-        <!-- 
-		tambien se puede trabajar por cantidad de lineas con la propiedad row(cuantas lienas puede escribir)
-		disabled
-		readonly
-		-->
+      </div>
+      <div class="form_input">
+        <label>Acepto <a target="_blank" href="terminos.html">terminos y condiciones</a>
+        </label>
+        <input type="checkbox" class="checkbox" />
       </div>
     </form>
   </body>

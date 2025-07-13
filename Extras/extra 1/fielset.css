@@ -1,0 +1,78 @@
+/* * {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+} */
+h2 {
+  text-align: center;
+}
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #333, #000);
+  color: #a09a9a;
+  font-family: sans-serif;
+}
+
+form {
+  background-color: transparent;
+  padding: 10px 15px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0px 0px 35px #fff2;
+  margin-top: 50px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+.form_input {
+  padding: 6px 20px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 9px;
+  border: none;
+  border: 1px solid #999;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px #0003;
+  background-color: transparent;
+  color: #eee;
+  margin: 6px 6px;
+}
+option {
+  background-color: #222;
+}
+textarea {
+  font-family: sans-serif;
+  min-width: 100%;
+  resize: none;
+  min-height: 100px;
+  max-height: 200px;
+  /* form-sizing: content; */
+}
+fieldset {
+  margin: 20px;
+  border: 2px solid #fff6;
+  border-radius: 5px;
+  padding: 8px 6px 20px 6px;
+}
+
+legend {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+label {
+  margin-left: 4px;
+}
+.checkbox {
+  margin-top: 17px;
+    width: 1rem;
+    align-content: center;
+}
+a {
+    color: #69f;
+    text-decoration: none;
+}
