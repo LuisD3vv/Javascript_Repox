@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Temporizador</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body onload="comenzarReloj()">
+  <body onload="comenzarReloj()">
     <input type="number" id="tiempoElegido" placeholder="Ingresa el valor" />
     <button onclick="comenzarTiempo()">Alarma</button>
     <h1 id="textoAlarma">00:00:00</h1>
 
-<audio id="audioAlarma">
-    <source src="audio/alarma.mp3"  type="audio/mpeg">
-    No se ha podido reproducir.
-</audio>
+    <audio id="audioAlarma">
+      <source src="audio/alarma.mp3" type="audio/mpeg" />
+      No se ha podido reproducir.
+    </audio>
 
     <script>
-        let elementoSegundos = document.getElementById("tiempoElegido");
-        let elementoTextoAlarma = document.getElementById("textoAlarma");
-        let elementoSonidoAlarma = document.getElementById("audioAlarma");
+      let elementoSegundos = document.getElementById("tiempoElegido");
+      let elementoTextoAlarma = document.getElementById("textoAlarma");
+      let elementoSonidoAlarma = document.getElementById("audioAlarma");
 
-        function comenzarTiempo() {
-            setTimeout(tiempoCumplido, 1000 * elementoSegundos.value); // segundos = 1000 milisegundos
-        }//El método global setTimeout() establece un temporizador que ejecuta una función o una pieza de código específica una vez que expira el temporizador.
-       
-        function tiempoCumplido() {
-            elementoTextoAlarma.style.color = "green";//cambiar color del elemento desde javascript, hay otras cosas que se pueden cambiar
-            elementoSonidoAlarma.play();
-        }
-        function comenzarReloj(){
-            setInterval(ticTac, 1000);
-        }
-        function ticTac() {
-            let fecha = new Date();// conseguir el objeto date, con fechas y horas
-            let hora = String(fecha.getHours()).padStart(2,"0"); // convertir en string los elementos, 
-            // luego se accede a su funcion llamada padstart, que, como dicen sus argumentos, si no hay dos elementos, rellena con un cero si faltan ambos,
-            //  o uno si solo falta uno ejemplo = 14:12:1, en ese elemento el 1, se rellenaria con un cero (01) o con cualquier caracter elegido, tambien funcionaria en el caso de las horas y minutos 
-            
-            let minutos = String(fecha.getMinutes()).padStart(2, "0");
-            let segundo =String(fecha.getSeconds()).padStart(2, "0");
+      function comenzarTiempo() {
+        setTimeout(tiempoCumplido, 1000 * elementoSegundos.value); // segundos = 1000 milisegundos
+      } //El método global setTimeout() establece un temporizador que ejecuta una función o una pieza de código específica una vez que expira el temporizador.
 
-            let textoHora = hora + ":" + minutos + ":"+ segundo;
-            elementoTextoAlarma.textContent = textoHora;
+    function tiempoCumplido() {
+        elementoTextoAlarma.style.color = "green"; //cambiar color del elemento desde javascript, hay otras cosas que se pueden cambiar
+        elementoSonidoAlarma.play();
+    }
+      // esta funcion intervalo, ejecutara cada segundo la funcion tictac
+    function comenzarReloj() {
+        // Este metodo solo recibe la funcion ye l parametro con el cual se alnzara el intervalo o cada cuanto
+        // opbviamente se puede crear como funcion flecha
+        setInterval(ticTac, 1000);
+    }
+    function ticTac() {
+        let fecha = new Date(); // conseguir el objeto date, con fechas y horas
+        let hora = String(fecha.getHours()).padStart(2, "0"); // convertir en string los elementos,
+        // luego se accede a su funcion llamada padstart, que, como dicen sus argumentos, si no hay dos elementos, rellena con un cero si faltan ambos,
+        //  o uno si solo falta uno ejemplo = 14:12:1, en ese elemento el 1, se rellenaria con un cero (01) o con cualquier caracter elegido, tambien funcionaria en el caso de las horas y minutos
 
-            /*
+        let minutos = String(fecha.getMinutes()).padStart(2, "0");
+        let segundo = String(fecha.getSeconds()).padStart(2, "0");
+
+        let textoHora = hora + ":" + minutos + ":" + segundo;
+        elementoTextoAlarma.textContent = textoHora;
+        elementoTextoAlarma.style.fontSize = "25px";
+        elementoTextoAlarma.style.borderBottom = "3px solid grey"
+        elementoTextoAlarma.style.width = "7.5rem";
+        /*
             let fecha = new Date();
             Por afuera se investigo el toLocateDateString(es-mx); trae en formato de string la fecha y hora de la localizacion elegida en los parentesis
             */
-        }
+    }
     </script>
 </body>
-
 </html>
-

@@ -68,9 +68,9 @@ function regresar(operacion) {
 
   ultimoResultado = resultado; // en cada operacion, el resultado se sobreescibre, siendo este valor al que las otras funciones acceden para aplicarles el redondeo
 
-  if(toString(resultado).length > 18){
+  if(toString(resultado).length > 11){
      document.getElementById("resultado").textContent = "Ans = " + resultado;
-     document.getElementById("resultado").style.fontSize = "10px";
+     document.getElementById("resultado").style.fontSize = "13px";
      document.getElementById("resultado").style.color = "white";
   }
   else{

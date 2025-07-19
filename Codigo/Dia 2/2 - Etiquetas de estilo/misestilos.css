@@ -1,6 +1,10 @@
 h1 {
+  text-align: center;
   font-family: "Courier New", Courier, monospace;
-  color: blue;
+  color: rgb(66, 66, 219);
+  border-bottom: 1px solid grey;
+  width: 10rem;
+  margin: auto;
 }
 p {
   color: green;

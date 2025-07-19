@@ -11,7 +11,7 @@ details {
 /*Editar cuando este abierto el elemento*/
 details[open] {
   border: 1px solid #ddd;
-  font-weight: bold;
+  transition: all ease 0.3s;
 }
 summary {
   border: 1px solid #ddd;
@@ -26,4 +26,7 @@ summary {
 a {
     color: #69f;
     text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
 }

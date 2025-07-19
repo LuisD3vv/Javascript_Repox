@@ -21,7 +21,6 @@ function calcular() {
   document.getElementById("result").innerHTML = "Tu IMC es " + Elementoresultado;
 
   let imagenCurseada = document.querySelector("img");
-  let miSrc = imagenCurseada.getAttribute("src");
   if (resultado > 30) {
     imagenCurseada.setAttribute("src", "img/NosuboGordas.jpg");
   } else if (resultado > 25 && resultado < 29.99) {

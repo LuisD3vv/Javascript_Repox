@@ -26,10 +26,12 @@
             font-weight: bold;
             font-family: monospace;
             text-transform: capitalize;
+            border-radius: 5px;
         }
+        
         #parrafoSalida {
             box-shadow: 0px 0px 3px 1px black;
-            border-radius: 10px;
+            border-radius: 4px;
             width: 15.5rem;
             min-height: 7rem;
             padding: 5px;
@@ -39,7 +41,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0px 0px 3px 1px grey ;
+            box-shadow: 0px 3px 1px 1px rgb(255, 255, 255) ;
             width: 20rem;
             margin: 3rem auto;
             height: auto;
@@ -57,20 +59,29 @@
         }
         #menor{
             background-color: lightcoral;
-            border-radius: 5px;
+            border-radius: 2px;
             color: #222;
         }
         #mayor {
             background-color: lightgreen;
-                        border-radius: 5px;
+                        border-radius: 2px;
             color: #222;
         }
         #cualquiera {
             background-color: transparent;
         }
+        input{
+            margin-left: 0.5rem;
+                        text-align: center;
+
+        }
+        input:hover{
+            border-radius: 4px;
+            box-shadow: 0px 0px 1px 1px #eee;
+        }
     </style>
 </head>
-<body onload="crearTiendas('itemsTiendas', 0,8)">
+<body onload="crearTiendas('itemsTiendas', 0,3)">
     <div class="gen">
     <p class="title"> &#127849 venta de Madonas &#127849 </p>
     <div id="itemsTiendas">

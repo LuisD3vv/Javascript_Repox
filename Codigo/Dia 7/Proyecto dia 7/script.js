@@ -44,7 +44,10 @@ function CrearParrafoTienda(textoLabel, ValorMin) {
   // devolver el parrafo completo
   return elementoParrafo;
 }
+
+// A apartir de este punto empiezan funciones extras
 function extraerNumeroDesdeElemento(elemento) {
+  // esta funcion toma como parametro un inpur y regresa su contenido
   let mitexto = elemento.value;
   let miNumero = Number(mitexto);
   return miNumero;
@@ -58,9 +61,11 @@ function calcular() {
 
   for (let item of elementoventas.children) {
     let valorVenta = extraerNumeroDesdeElemento(item.children[1]);
+    // Parece confuso, pero solo dice, guarda en ventas en el indice[posicion ventas] = este numero, facil
     Ventas[posicionVentas] = valorVenta;
     posicionVentas += 1;
   }
+  // Le pasamos el array de las ventas
   let TotalVentas = sumarTotal(Ventas);
   let VentaMayor = Calcularmayor(Ventas);
   let ventaMenor = Calcularmenor(Ventas);
@@ -68,9 +73,8 @@ function calcular() {
   document.getElementById("parrafoSalida").textContent =
     "Total Ventas: " + TotalVentas;
 
-  let elementoColores = document.getElementById("itemsTiendas");
-
-  for (elemento of elementoColores.children) {
+  // Darle un id segun si es el mayor o menor
+  for (elemento of elementoventas.children) {
     let input = elemento.children[1];
     input.setAttribute("id", "cualquiera");
     if (input.value == VentaMayor) {

@@ -20,6 +20,8 @@
     <script>
         function saludarUsuario() {
             let cambio = document.getElementById("nombre");
+            cambio.style.textDecoration = "underline";
+            cambio.style.color = "red";
             let miNombre = document.getElementById("entradaUsuario");
             cambio.textContent = "Hola " + miNombre.value;
             // alert("Hola " + miNombre.value);
