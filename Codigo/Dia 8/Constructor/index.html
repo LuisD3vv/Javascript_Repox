@@ -8,26 +8,44 @@
 <body>
     <script>
         // Constructor que define instancias y funciones
-        function Perro(){
+        function Perro(raza,edad,color){
             this.patas = 4;
+            this.raza = raza;
+            this.edad = edad;
+            this.color = color
             this.ladrar = function(){
                 console.log("Guau");
             };
         }
         // Nuevo objeto con new
-        let simba = new Perro();
-        let Rocko = new Perro();
-        let Hachiko = new Perro();
+        let simba = new Perro("Shih Tzu",4,"Cafe");
+        let Rocko = new Perro("Mezclado",5,"Blanco");
+        let Hachiko = new Perro("golden",9,"Negro");
 
+        // item que itera sobre las propiedades de un objeto
+        for (let caracteristica in Rocko){
+            console.log(caracteristica + ": " + Rocko[caracteristica]);
+        }
         // Otro ejemplo
-        let Automovil = function(){
+        /*let Automovil = function(){
         this.marca = "Ford",
         this.modelo = "Fiesta",
         this.anio = 2015,
         this.arrancar = function(){
             console.log("En marcha");
         }
-        };
+        let automovil = {
+        marca: 'Ford',
+        modelo: 'Fiesta',
+        anio: 2015
+};
+        let propiedad;
+        function mostrarInfo() {
+         for (propiedad in automovil) {
+        console.log(propiedad + ": "+ automovil[propiedad])
+    }
+}
+        };*/
     </script>
 </body>
 </html>
