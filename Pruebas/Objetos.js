@@ -1,5 +1,6 @@
 // Los objetos son utilizados par almenar multiples variables
-// usualemente sepoarados por key:value
+// usualemente sepoarados por key:value, son planillas de atributos para
+// elementos que comparten las misma caracrteriacas y comportamientos
 
 object = {
     key1: value1,
@@ -58,20 +59,17 @@ const user = {
     following: 3,
     verified: false
 };
-
 // cambiando las propieades
 user.verified = true;
 user.location = "🌐";
 
 console.log(user);
 
-
 pokemon = {
     name: "Pikachu",
     type: "Electric ⚡️",
     level: 55,
 }
-
 pokemon["name"] = "Ivysur";
 pokemon["type"] = "Grass";
 pokemon["isCaught"] = true;
@@ -97,13 +95,10 @@ const phone = {
         console.log("Telefono prendido")
     }
 }
-
 phone.ringtone();
 // Output: Ring, ring! Ring, ring! 📲
 
-
 // Write code below 💖
-
 const pig = {
     name:"willy",
     type: "pig",
@@ -112,7 +107,6 @@ const pig = {
         console.log(`${pig.name} is a ${pig.age} old ${pig.type} that goes oing oing`);
     }
 }
-
 const sheep = {
     name:"shoun",
     type: "sheep",
@@ -121,7 +115,6 @@ const sheep = {
         console.log(`${sheep.name} is a ${sheep.age} old ${sheep.type} that goes beeep!`);
     }
 }
-
 const dog = {
     name:"rocko",
     type: "dog",
@@ -130,7 +123,44 @@ const dog = {
         console.log(`${dog.name} is a ${dog.age} old ${dog.type} that goes woof!`);
     }
 }
-
 pig.makeSound();
 dog.makeSound();
 sheep.makeSound();
+
+
+// codigo de una practica
+
+departTripTicket = {
+    name: "luis",
+    from:"Mexico",
+    to: "Peru",
+    businessClass: true,
+    upgrade: function() {
+        if (!this.businessClass) {
+            returnTripTicket["this.businessClass"] = true;
+            console.log("Ahora eres clase ejecutiva!");
+        }
+        else {
+            console.log("Your ticket is already business class!");
+        }
+    }
+}
+
+returnTripTicket = {
+    name: "luis",
+    from: "Peru",
+    to: "Mexico",
+    businessClass: true,
+    upgrade: function() {
+        if (!this.businessClass) {
+            returnTripTicket["this.businessClass"] = true;
+            console.log("Ahora eres clase ejecutiva!");
+        }
+        else {
+            console.log("Your ticket is already business class!");
+        }
+    }
+}
+
+
+returnTripTicket.upgrade()
