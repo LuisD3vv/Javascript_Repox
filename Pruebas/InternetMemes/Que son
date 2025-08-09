@@ -1,0 +1,21 @@
+Con los eventos podemos hacer aun mas dinamica nuestra pagina, pudiendola dotar de vida
+gracias poder detectar camios como, presionar, pasar por encima de una elemento, envaidno un formulario
+e incluso presioando teclas del teclado
+
+Un ejemplo de esto es addEventListener()
+
+
+el cual le puedes decir que evento quieres que interpete para ejedcutar una funcion sobre un elemento qu eactiva esat propiedad
+
+let likeButton = document.getElementById("like-button");
+let likeCount = document.getElementById("like-count");
+
+let numberOfLikes = 0
+
+likeButton.addEventListener("click", function() {
+  numberOfLikes++;
+  likeCount.innerText = numberOfLikes;
+});
+
+en el ejemplo de arriba, cada que presionamos el botton, el texto auemnta uno ya que esta "interpretando"
+el evento del click para ejecutar la funcion o llamar a una

@@ -61,7 +61,7 @@ let number = [0,1,2,3,4,5,6,7,8,9];
 let i = 0;
 
 for(i;i< number.length;i++) {
-    // utilizando template backtics
+    // utilizando template string
     console.log(`${multiple} por ${number[i]} =  ${multiple * number[i]}`);
 }
 
@@ -86,7 +86,7 @@ console.log(myArray);
 
 // indexof e includes, son dos metodos de los arrays
 
-
+// declarando un array
 const stories = [
     "Sorcerer's Stone",
     "Chamber of Secrets",
