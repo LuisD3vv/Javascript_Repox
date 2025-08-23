@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+<body>
+<h1>Registro de Empleados</h1>
+<form class="formulario">
+    <fieldset class="no-margin no-padding">
+        <legend>Ingresa los Datos del trabajador</legend>
+    <div class="contenedor-campos">
+        <div class="campo">
+            <label for="legajo">Legajo</label>
+            <input type="text" placeholder="Ingresa tu matricula (legajo)" id="legajo" autocomplete="off">
+        </div>
+        <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" placeholder="Ingresa tu nombre" id="nombre" autocomplete="off">
+        </div>
+        <div class="campo">
+            <label for="apellido">Apellido</label>
+            <input type="text" placeholder="Ingresa tu apellido" id="apellido" autocomplete="off">
+
+        </div>
+        <div class="campo">
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="text" placeholder="Fecha de nacimiento" id="nacimiento" autocomplete="off">
+        </div>
+        <div class="campo">
+            <label for="puesto">Puesto</label>
+            <input type="text" placeholder="Puesto Actual" id="puesto" autocomplete="off">
+        </div>
+    </div>
+    </fieldset>
+    <div class="contenedor-botones">
+        <div class="contenedor-botones-1">
+            <button class="boton" id="agregar" onclick="AgregarElemento()">Agregar</button>
+        </div>
+        <div class="contenedor-botones-2">
+            <button class="boton" id="listar" onclick="ListarElementos()">Listar</button>
+        </div>
+    </div>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>

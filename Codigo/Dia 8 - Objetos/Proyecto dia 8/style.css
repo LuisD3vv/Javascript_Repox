@@ -1,0 +1,180 @@
+:root {
+    --fuente:"Open Sans", sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: var(--fuente),sans-serif;
+}
+body {
+    background-color: #222;
+}
+h1 {
+    text-align: center;
+    color: grey;
+    width: min(30rem,95%);
+    margin: 2rem auto;
+}
+.formulario {
+    width:min(45rem,100%);
+    margin: 5rem auto;
+    padding: 1rem;
+    height: 64rem;
+    border-radius: 1rem;
+    border-right:2px solid transparent;
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+fieldset {
+    border: none;
+}
+legend {
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+}
+.contenedor-campos {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    margin: auto;
+    padding: 1rem 0 1rem 0;
+    gap: 1rem;
+}
+label {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    color: #eee;
+    letter-spacing: 1px;
+}
+input {
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+
+}
+input::placeholder {
+    text-align: center;
+    color: white;
+    opacity: 30%;
+    font-size: 1.4rem;
+}
+input:focus {
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.16);
+    border-right: 2px solid blue;
+    border-left: 2px solid red;
+    transition: all 0.3s ease;
+}
+.campo {
+    display: flex;
+    flex-direction: column;
+    width: min(45rem,100%);
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+.contenedor-botones {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0 1rem 0;
+    gap: 1rem;
+    height: 5rem;
+}
+.contenedor-botones-1,.contenedor-botones-2 {
+    flex:1 1 20rem;
+}
+.boton {
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.4rem;
+    cursor: pointer;
+    font-family: var(--fuente),sans-serif;
+    border: medium;
+}
+@media (max-width: 40rem) {
+    .formulario {
+        height: auto;
+        border: none;
+        margin-top: auto;
+    }
+    legend {
+        margin-bottom: 1rem;
+    }
+    .boton {
+        padding: 2rem;
+    }
+    .contenedor-campos {
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+    .formulario {
+        padding: 0;
+    }
+
+    .contenedor-botones {
+        width: 95%;
+        margin: auto auto 1rem auto;
+    }
+    input {
+        border-radius: .5rem;
+        background-color: rgba(211, 211, 211, 0.04);
+        transition: all 0.5s ease;
+
+    }
+    input::placeholder {
+    }
+    input:focus {
+        background-color: unset;
+    }
+    .contenedor-campos {
+        justify-content: space-between;
+    }
+    .campo {
+
+    }
+    fieldset {
+
+    }
+    button{
+        outline: none;
+    }
+    button:focus {
+        outline: 2px solid gold;
+    }
+}
+#agregar {
+    background-color: lightgreen;
+    box-shadow: 0 2px 1px 1px rgba(144, 238, 144, 0.5);
+}
+#listar {
+    background-color: lightcoral;
+    color: #eee;
+    box-shadow: 0 2px 1px 1px rgba(240, 128, 128, 0.5);
+}
+#agregar:active,#listar:active {
+    margin-top: 5px;
+    box-shadow: unset;
+}
