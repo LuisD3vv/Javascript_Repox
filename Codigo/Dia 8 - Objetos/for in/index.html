@@ -1,10 +1,28 @@
 <!DOCTYPE html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="utf-8">
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 
+    <script>
+        // Este loop se refiere a cada propiedad de un objeto
+
+        let perro = {
+            nombre: "Simba",
+            raza: "Shi Tzu",
+            edad: 4,
+            //Metodo
+            ladrar(){
+                console.log("Guau");
+            }
+        };
+        // iteramos sobre el indice
+        for (let objeto in perro) {
+            console.log(`${objeto} = ${perro[objeto]}`);
+        }
+    </script>
 </body>
 </html>

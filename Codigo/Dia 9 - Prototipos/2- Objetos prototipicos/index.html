@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Libro(autor,titulo,cantPaginas) {
+            this.autor = autor
+            this.titulo = titulo
+            this.cantPaginas = cantPaginas
+        }
+        let libro1 = new Libro("Stephen King", "carrie",524);
+
+        console.log(libro1.valueOf());
+        
+        // Ejemplo 1
+        function Futbolista (nombre,equipo,posicion){
+        this.nombre = nombre 
+        this.equipo = equipo
+        this.posicion = posicion
+        };
+
+        function prototipos() {
+        let futbolista1 = new Futbolista("Lionel Messi", "PSG", "Delantero");
+        console.log(futbolista1.valueOf())
+        }
+
+        // Ejemplo 2
+
+        function Pelicula (titulo,director,duracion){
+            this.titulo = titulo 
+            this.director = director
+            this.duracion = duracion
+        };
+
+        function prototipos() {
+            let pelicula1 = new Pelicula("Jurassic Park","Steven Spielberg", 127);
+            console.log(pelicula1.valueOf());
+        }
+
+        // Ejemplo de contructores y prototipos
+
+        function Restaurante (nombre,direccion,ciudad) {
+        this.nombre = nombre
+        this.direccion = direccion
+        this.ciudad = ciudad
+        }
+
+        // creando objeto con constructor
+        let restaurante1 = new Restaurante("Aji bistro","Quintas","culiacan");
+        // creando objeto con objeto.contructor
+        let restaurante2 = new restaurante1.constructor("Macdonals","tres rios","culiacan");
+    </script>
+</body>
+</html>

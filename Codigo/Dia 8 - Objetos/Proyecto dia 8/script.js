@@ -47,7 +47,7 @@ function ListarElementos () {
         return 1;
     }
 
-   let listado = '';
+    let listado = '';
     for (let empleado of empleados) {
         for (let prop in empleado) {
             // listado =  a lo que ya haya mas la propiedad + el nombre y la propiedad
@@ -57,4 +57,3 @@ function ListarElementos () {
     }
     alert(listado)
 }
-// repasar que hace location.reload y document.location =

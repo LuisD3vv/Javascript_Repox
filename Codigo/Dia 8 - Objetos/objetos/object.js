@@ -33,3 +33,9 @@ let polo = {
         console.log("Polo fabricado");
     }
 };
+
+// ejemplo con un for in
+
+for (let propiedad in polo) {
+    console.log(`${propiedad}= ${polo[propiedad]}`);
+}

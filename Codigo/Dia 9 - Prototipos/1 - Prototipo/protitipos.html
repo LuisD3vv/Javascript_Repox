@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let perro = {nombre: 'rocko'};
+        let perro1 = Object.create(perro);
+        // mas ejemplos
+
+        let auto = {
+        marca: "Chevroelt",
+        modelo: "Camaro"
+        }
+
+        function prototipos() {
+        let auto1 = Object.create(auto);
+        // proto es para conocer a el prototipo del cual estan herdando los metodos y atributos
+        console.log(auto1.__proto__);
+        }
+    </script>
+</body>
+</html>

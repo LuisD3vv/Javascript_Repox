@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // declarar las propiedades dento del construtor
+    function Libro(autor,titulo,cantPaginas) {
+        this.autor = autor
+        this.titulo = titulo
+        this.cantPaginas = cantPaginas
+    }
+    let libro1 = new Libro("Stephen King", "carrie", 524);
+
+    // declarar los metodos dentro de prototype
+    Libro.prototype.abrirLibro = function(){
+        alert(this.titulo + " ha sido abierto");
+    }    
+    Libro.prototype.edicion = this.edicion;
+
+
+    function UnObjeto(a) {
+        this.a = a;
+    }
+
+    UnObjeto.prototype.metodo1 = () => {
+        UnObjeto.prototype.metodo2 = () => {
+
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
@@ -15,7 +16,7 @@
         <legend>Ingresa los Datos del trabajador</legend>
     <div class="contenedor-campos">
         <div class="campo">
-            <label for="legajo">Legajo</label>
+            <label for="legajo">Legajo (matricula)</label>
             <input type="text" placeholder="Ingresa tu matricula (legajo)" id="legajo" autocomplete="off">
         </div>
         <div class="campo">
@@ -39,10 +40,10 @@
     </fieldset>
     <div class="contenedor-botones">
         <div class="contenedor-botones-1">
-            <button class="boton" id="agregar" onclick="AgregarElemento()">Agregar</button>
+            <button type="button" class="boton" id="agregar" onclick="AgregarElemento()">Agregar</button>
         </div>
         <div class="contenedor-botones-2">
-            <button class="boton" id="listar" onclick="ListarElementos()">Listar</button>
+            <button type="button" class="boton" id="listar" onclick="ListarElementos()">Listar</button>
         </div>
     </div>
 </form>
